@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+ "data":{
+  "url":"https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/data_working.csv",
+  "format": {
+    "type": "dsv",
+    "delimiter": ";"
+  }
+ },
+ "mark": {
+    "type": "line"
+ },
+ "width": 500,
+ "height": 350,
+ "title" : {
+    "text": "Vice spending",
+    "subtitle": "Spending ($m) on Alcohol, Tobacco, and Narcotics, Source : ONS"
+ },
+ "encoding":{
+   "x": {
+    "field": "date",
+    "type": "temporal",
+    "axis" : {
+      "grid":false
+
+    }
+   },
+   "y": {
+   "field":"value",
+   "type": "quantitative",
+   "axis": {
+    "labelExor": "'$'+ datum, label+ 'M'"
+   },
+   "title":""
+  },
+ "color":{
+  "field": "series"
+  }
+ }
+
+}
