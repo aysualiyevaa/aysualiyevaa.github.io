@@ -1,0 +1,118 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "values": [
+        {"date": "2019-06-01", "value": 0.036},
+        {"date": "2019-07-01", "value": 0.037},
+        {"date": "2019-08-01", "value": 0.036},
+        {"date": "2019-09-01", "value": 0.035},
+        {"date": "2019-10-01", "value": 0.036},
+        {"date": "2019-11-01", "value": 0.036},
+        {"date": "2019-12-01", "value": 0.036},
+        {"date": "2020-01-01", "value": 0.036},
+        {"date": "2020-02-01", "value": 0.035},
+        {"date": "2020-03-01", "value": 0.044},
+        {"date": "2020-04-01", "value": 0.148},
+        {"date": "2020-05-01", "value": 0.132},
+        {"date": "2020-06-01", "value": 0.11},
+        {"date": "2020-07-01", "value": 0.102},
+        {"date": "2020-08-01", "value": 0.084},
+        {"date": "2020-09-01", "value": 0.078},
+        {"date": "2020-10-01", "value": 0.068},
+        {"date": "2020-11-01", "value": 0.067},
+        {"date": "2020-12-01", "value": 0.067},
+        {"date": "2021-01-01", "value": 0.064},
+        {"date": "2021-02-01", "value": 0.062},
+        {"date": "2021-03-01", "value": 0.061},
+        {"date": "2021-04-01", "value": 0.061},
+        {"date": "2021-05-01", "value": 0.058},
+        {"date": "2021-06-01", "value": 0.059},
+        {"date": "2021-07-01", "value": 0.054},
+        {"date": "2021-08-01", "value": 0.051},
+        {"date": "2021-09-01", "value": 0.047},
+        {"date": "2021-10-01", "value": 0.045},
+        {"date": "2021-11-01", "value": 0.041},
+        {"date": "2021-12-01", "value": 0.039},
+        {"date": "2022-01-01", "value": 0.04},
+        {"date": "2022-02-01", "value": 0.038},
+        {"date": "2022-03-01", "value": 0.036},
+        {"date": "2022-04-01", "value": 0.037},
+        {"date": "2022-05-01", "value": 0.036},
+        {"date": "2022-06-01", "value": 0.036},
+        {"date": "2022-07-01", "value": 0.035},
+        {"date": "2022-08-01", "value": 0.036},
+        {"date": "2022-09-01", "value": 0.035},
+        {"date": "2022-10-01", "value": 0.036},
+        {"date": "2022-11-01", "value": 0.036},
+        {"date": "2022-12-01", "value": 0.035},
+        {"date": "2023-01-01", "value": 0.034},
+        {"date": "2023-02-01", "value": 0.036},
+        {"date": "2023-03-01", "value": 0.035},
+        {"date": "2023-04-01", "value": 0.034},
+        {"date": "2023-05-01", "value": 0.037},
+        {"date": "2023-06-01", "value": 0.036},
+        {"date": "2023-07-01", "value": 0.035},
+        {"date": "2023-08-01", "value": 0.038},
+        {"date": "2023-09-01", "value": 0.038},
+        {"date": "2023-10-01", "value": 0.038},
+        {"date": "2023-11-01", "value": 0.037},
+        {"date": "2023-12-01", "value": 0.037},
+        {"date": "2024-01-01", "value": 0.037},
+        {"date": "2024-02-01", "value": 0.039},
+        {"date": "2024-03-01", "value": 0.038},
+        {"date": "2024-04-01", "value": 0.039},
+        {"date": "2024-05-01", "value": 0.04},
+        {"date": "2024-06-01", "value": 0.041},
+        {"date": "2024-07-01", "value": 0.043},
+        {"date": "2024-08-01", "value": 0.042},
+        {"date": "2024-09-01", "value": 0.041}
+      ]
+    },
+    "width": 500,
+    "height": 350,
+    "title": {
+      "text": "U.S. Unemployment Rate",
+      "subtitle": "Share of the labor force actively seeking jobs"
+    },
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "axis": {
+          "grid": false,
+          "tickCount": "year",
+          "format": "%Y",
+          "labelExpr": "month(datum.value) === 0 ? timeFormat(datum.value, '%Y') : ''"
+        }
+      },
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "scale": {
+          "domain": [0, 0.14]
+        },
+        "axis": {
+          "title": null,
+          "format": ".0%"
+        }
+      }
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "stroke": "blue",
+          "strokeWidth": 2
+        }
+      },
+      {
+        "mark": {
+          "type": "point",
+          "filled": true,
+          "size": 50
+        }
+      }
+    ]
+  }
+  
+  

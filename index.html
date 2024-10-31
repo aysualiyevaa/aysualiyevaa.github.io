@@ -136,7 +136,16 @@
              <figure id= "Location7"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
        <!-- This is a script, it's a way to run JavaScript code on the page -->
              </section>
-</script>
+     </section>
+            <div class="chart-description">
+                  <h2>WEEK 4: Ninth and Tenth Graph</h2>
+                  <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                 The line chart illustrates the unemloyment rate in the U.S for the last 5 years. 
+                  </p>
+                    <figure id= "Location8"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+              <!-- This is a script, it's a way to run JavaScript code on the page -->
+                 </section>
+       
 
         <script>
             // This is a comment in JavaScript - it's a different language to HTML and CSS
@@ -149,6 +158,7 @@
             let figure_6_spec = "vices_spending.json"
             let figure_7_spec = "wk4_chart1.json"
             let figure_8_spec = "wk4_chart2.json"
+            let figure_9_spec= "portfolio4.json"
 
                                                                                                                         // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
     
@@ -167,6 +177,7 @@
             vegaEmbed('#vice_spending', figure_6_spec)
             vegaEmbed ('#Location6', figure_7_spec)
             vegaEmbed ('#Location7', figure_8_spec)
+            vegaEmbed ('#Location8', figure_9_spec)
         </script>
 <body>
     
