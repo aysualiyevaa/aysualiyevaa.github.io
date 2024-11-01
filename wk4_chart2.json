@@ -1,54 +1,54 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": "GDP Growth",
-      "anchor": "start",
-      "subtitle": "GDP, quarterly growth rate, % | Source: ONS through ECO API",
-      "fontSize": "14",
-      "subtitleFontSize": "12",
-      "color": "#e62391",
-      "subtitleColor": "#cf127a"
-    },
-    "height": "250",
-    "width": "450",
-    "autosize": {
-      "type": "fit",
-      "contains": "padding"
-    },
-    "background": "#ffffff",
-    "view": {
-      "fill": "#ffffff",
-      "strokeOpacity": 0
-    },
-    "data": {
-      "url": "https://api.economicsobservatory.com/gbr/grow?vega",
-      "format": {
-        "type": "json"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "GDP Growth",
+    "anchor": "start",
+    "subtitle": "GDP, quarterly growth rate, % | Source: ONS through ECO API",
+    "fontSize": "14",
+    "subtitleFontSize": "12",
+    "color": "#604253",
+    "subtitleColor": "#604253"
+  },
+  "height": "250",
+  "width": "450",
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "background": "#ffffff",
+  "view": {
+    "fill": "#ffffff",
+    "strokeOpacity": 0
+  },
+  "data": {
+    "url": "https://api.economicsobservatory.com/gbr/grow?vega",
+    "format": {
+      "type": "json"
+    }
+  },
+  "mark": {
+    "type": "line",
+    "color": "#604253",
+    "strokeWidth": "2"
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": "",
+        "titleColor": "#604253",
+        "grid": false
       }
     },
-    "mark": {
-      "type": "line",
-      "color": "#f414b8",
-      "strokeWidth": "2"
-    },
-    "encoding": {
-      "x": {
-        "field": "date",
-        "type": "temporal",
-        "axis": {
-          "title": "",
-          "titleColor": "#ff08a9",
-          "grid": false
-        }
-      },
-      "y": {
-        "field": "value",
-        "type": "quantitative",
-        "axis": {
-          "title": "",
-          "titleColor": "#ff00aa",
-          "grid": false
-        }
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": {
+        "title": "",
+        "titleColor": "#604253",
+        "grid": false
       }
     }
   }
+}

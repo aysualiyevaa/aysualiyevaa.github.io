@@ -1,54 +1,54 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": "Productivity index",
-      "anchor": "start",
-      "subtitle": "Index (2018 = 100) | Source: INEGI through ECO API",
-      "fontSize": "18",
-      "subtitleFontSize": "14",
-      "color": "#162fbb",
-      "subtitleColor": "#4f5aea"
-    },
-    "height": "450",
-    "width": "450",
-    "autosize": {
-      "type": "fit",
-      "contains": "padding"
-    },
-    "background": "#ffffff",
-    "view": {
-      "fill": "#ffffff",
-      "strokeOpacity": 0
-    },
-    "data": {
-      "url": "https://api.economicsobservatory.com/mex/prod?vega",
-      "format": {
-        "type": "json"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Productivity",
+    "anchor": "start",
+    "subtitle": "Output per hour, Index, base year = 100 | Source: ONS through ECO API",
+    "fontSize": "14",
+    "subtitleFontSize": "12",
+    "color": "#09019f",
+    "subtitleColor": "#09019f"
+  },
+  "height": "250",
+  "width": "550",
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "background": "#ffffff",
+  "view": {
+    "fill": "#ffffff",
+    "strokeOpacity": 0
+  },
+  "data": {
+    "url": "https://api.economicsobservatory.com/gbr/prod?vega",
+    "format": {
+      "type": "json"
+    }
+  },
+  "mark": {
+    "type": "line",
+    "color": "#09019f",
+    "strokeWidth": "2"
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {
+        "title": "",
+        "titleColor": "#09019f",
+        "grid": false
       }
     },
-    "mark": {
-      "type": "line",
-      "color": "#040a83",
-      "strokeWidth": "2"
-    },
-    "encoding": {
-      "x": {
-        "field": "date",
-        "type": "temporal",
-        "axis": {
-          "title": "",
-          "titleColor": "#127cb9",
-          "grid": false
-        }
-      },
-      "y": {
-        "field": "value",
-        "type": "quantitative",
-        "axis": {
-          "title": "",
-          "titleColor": "#166999",
-          "grid": false
-        }
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": {
+        "title": "",
+        "titleColor": "#09019f",
+        "grid": false
       }
     }
   }
+}

@@ -6,8 +6,8 @@
     "subtitle": "Current prices, $bn | FRED through ECO API",
     "fontSize": "24",
     "subtitleFontSize": "16",
-    "color": "#d888dc",
-    "subtitleColor": "#000000"
+    "color": "#a506ae",
+    "subtitleColor": "#a506ae"
   },
   "height": "250",
   "width": "450",

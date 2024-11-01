@@ -50,24 +50,17 @@
     <p style="margin-top: 0px; color: darkblue">
         <!-- we're setting the margin to 0px so the header and authour name are close together -->
         Aysu Aliyeva | <a href="https://www.linkedin.com/in/aysu-aliyeva-473710222/ ">LinkedIn</a> | <a
-            href="https://github.com/aysualiyevaa">GitHub</a>
-            <a href="https://aysualiyevaa.github.io/project">Project</a>
+            href="https://github.com/aysualiyevaa">GitHub</a> | <a
+            href="https://aysualiyevaa.github.io/project">Project</a>
     </p>
     <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
       Welcome to my website!
 
     <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
     <section>
-        <div class="chart-description">
-            <h2>WEEK 1: First Graph </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                This graph illustrates the relationship between the life expectancy and GDP across the continents in the world obtained from the sources of UN Population Prospects 2022 and World Bank, respectively. 
-            </p>
-        </div>
-        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-    </section>
+
     <div class="chart-description">
-        <h2>WEEK 1: Second Graph- obtained from https://www.richarddavies.io/library </h2>
+        <h2>Portfolio task 1: First Graph- obtained from https://www.richarddavies.io/library </h2>
         <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
             The chart describes cumulative % change in population for the several countries for the years from 2020 to 2100 obtained from the UN source. 
         </p>
@@ -79,7 +72,7 @@
         <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
 </section>
         <div class="chart-description">
-            <h2>WEEK 1: Third Graph- obtained from https://www.richarddavies.io/library </h2>
+            <h2>Portfolio task 1: Second Graph- obtained from https://www.richarddavies.io/library </h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
                 This chart shows the annual percentage change of inflation for the years between 1800 and 2021 based on the Retail Price Index (RPI). The adjusting function on year selection is helpful for the yearly based analysis of the inflation change.    
             </p>
@@ -89,7 +82,7 @@
  
     </section>
     <div class="chart-description">
-       <h2>WEEK 2: Fourth Graph- obtained from Economic Observatory Data Hub</h2>
+       <h2>Portfolio task 2: Third Graph- obtained from Economic Observatory Data Hub</h2>
        <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
          Shown line graph obtained from the Economic Observatory Data Hub shows the increasing trend for GDP of the USA on current prices given as $bn starting from the mid 20th century. 
        </p>
@@ -99,30 +92,19 @@
 
   </section>
      <div class="chart-description">
-           <h2>WEEK 2: Fifth Graph- obtained from Economic Observatory Data Hub</h2>
+           <h2>Portfolio task 2: Fourth Graph- obtained from Economic Observatory Data Hub</h2>
            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
           The line chart illustrates rising trend for the debt as a ratio of GDP in Japan for the years starting from the late 20th century.
            </p>
              <figure id= "Location5"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
        <!-- This is a script, it's a way to run JavaScript code on the page -->
           </section>
-
- </section>
-     <div class="chart-description">
-           <h2>WEEK 2: Sixth Graph- obtained from the Dataset of Office for National Statistics</h2>
-           <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-              Given chart describes the pattern for consumer expenditure on beer, narcotics, spirits, tobacco, and wine, cider, and perry in the UK starting from the late 20th century.  
-           </p>
-             <figure id= "vice_spending"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-       <!-- This is a script, it's a way to run JavaScript code on the page -->
-             </section>
  
-
 </section>
     <div class="chart-description">
-       <h2>WEEK 3: Seventh and Eighth Graph- obtained from  Festival of Economics: Under-performing: How can we boost Britain’s low productivity? </h2>
+       <h2>Portfolio task 3: Fifth and Sixth Graphs- obtained from  Festival of Economics: Under-performing: How can we boost Britain’s low productivity? </h2>
        <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-         Although productivity is mentioned by Festival of Economics as decreasing for the UK, it is shown that there is rising pattern for productivity.  
+         Although productivity is mentioned by Festival of Economics as decreasing for the UK, it is shown that there is stable pattern for productivity.  
  
          <figure id= "Location6"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
    <!-- This is a script, it's a way to run JavaScript code on the page -->
@@ -138,32 +120,35 @@
              </section>
      </section>
             <div class="chart-description">
-                  <h2>WEEK 4: Ninth and Tenth Graph</h2>
+                  <h2>Portfolio task 4: Seventh and Eighth Graphs</h2>
                   <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                 The line chart illustrates the unemloyment rate in the U.S for the last 5 years. 
-                  </p>
+                 The line chart obtained from "Washington Post" illustrates the unemployment rate in the U.S for the last 5 years. 
+                  </p> 
+                  <img src="image_from_Washington_Post.png">
+                </p> Replicated chart:
                     <figure id= "Location8"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
               <!-- This is a script, it's a way to run JavaScript code on the page -->
+            </p>  Improved chart:
+            In order to visualize better, the months were added on the x-axis, and the color shade was darkened to show to pattern better.  
+            <figure id= "Location9"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
                  </section>
        
 
         <script>
             // This is a comment in JavaScript - it's a different language to HTML and CSS
     
-            let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; // We're storing the URL of the graph we want to display in a variable
             let figure_2_spec = "wk1_declining_pop.json"
             let figure_3_spec = "wk1_inflation.json"
             let figure_4_spec = "USA_GDP.json"
             let figure_5_spec = "wk2_Japan_debt_data.json"
-            let figure_6_spec = "vices_spending.json"
             let figure_7_spec = "wk4_chart1.json"
             let figure_8_spec = "wk4_chart2.json"
             let figure_9_spec= "portfolio4.json"
+            let figure_10_spec= "portfolio4_improved.json"
 
                                                                                                                         // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
     
-            vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
-    
+
             // Do you want to add more graphs?
             // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
             // e.g. 
@@ -174,10 +159,10 @@
             vegaEmbed('#Location3', figure_3_spec)
             vegaEmbed('#Location4', figure_4_spec)
             vegaEmbed('#Location5', figure_5_spec)
-            vegaEmbed('#vice_spending', figure_6_spec)
             vegaEmbed ('#Location6', figure_7_spec)
             vegaEmbed ('#Location7', figure_8_spec)
             vegaEmbed ('#Location8', figure_9_spec)
+            vegaEmbed ('#Location9', figure_10_spec)
         </script>
 <body>
     
