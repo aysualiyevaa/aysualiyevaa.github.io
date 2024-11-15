@@ -1,0 +1,21 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"data": {
+  "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/DJE9.json",
+  "format":{"property": "years"}
+},
+ "width": 350,
+  "height": 250,
+"title": {
+  "text": "Output per job: Transport & storage services H SIC07, 2022=100, SA, UK",
+  "subtitle": ["Index, base year= 100"], 
+   "subtitlePadding": 12,
+   "anchor": "start"
+},
+ "mark": {"type": "line"},
+"encoding": {
+  "x": {"field":"date", "type": "temporal", "title":""},
+  "y": {"field":"value", "type": "quantitative", "title":""}
+}
+
+
+}

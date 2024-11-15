@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/FZLV.json",
+    "format": {"property": "quarters"}
+    },
+    "width": 350,
+    "height": 250,
+    "title": {
+      "text": "Average labour compensation per hour worked: Whole economy: % change quarter on previous quarter SA: UK",
+      "anchor": "start"
+    },
+    "transform": [
+      {
+        "calculate": "datetime(datum.year,(substring(datum.quarter, 1)*3-2),1) ",
+        "as": "date"
+      }
+    ],
+   "mark": {"type": "line"},
+  "encoding": {
+    "x": {"field":"date", "type": "temporal", "title":""},
+    "y": {"field":"value", "type": "quantitative", "title":""}
+  }
+  
+  
+  }
