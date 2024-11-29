@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 400,
+    "title": {"text": "Map of Germany",
+    "subtitle": [
+        "Population in German states"
+      ]
+    },
+    "projection": {"type": "mercator"},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/3_mittel.geo.json",
+          "format": {"property": "features"}
+        },
+        "mark": {
+          "type": "geoshape",
+          "fill": "skyblue",
+          "opacity": 1,
+          "stroke": "black",
+          "strokeWidth": 0.7
+        }
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/combined_data.csv"
+        },
+        "mark": {"type": "circle"},
+        "encoding": {
+          "latitude": {"field": "lat", "type": "quantitative"},
+          "longitude": {"field": "long", "type": "quantitative"},
+          "size": {"field":"population", "type": "quantitative"},
+          
+          "tooltip": [
+            {"title": "State", "field": "State"},
+            {"title": "population", "field": "population"}
+          ]
+        }
+      }
+    ]
+  }
