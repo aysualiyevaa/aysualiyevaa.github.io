@@ -1,17 +1,17 @@
-﻿Object_id,States, poverty_rate, population_growth
-1,Baden,12.3%,11339260
-2,Bayern,11.9%,13435062 
-3, Berlin, 19.3%,3782202
-4, Brandenburg,15.2%,2581667
-5,Bremen,24.9%,691703
-6,Hamburg,15.0%,1910160
-7,Hessen,16.1%,6420729
-8,Mecklenburg-Vorpommern,19.4%,1629464
-9,Niedersachsen,17.1%,8161981
-10,Nordrhein-westfalen,18.5%,18190422
-11,Rheinland-Pfalz,15.6%,4174311
-12,Saarland,17.0%,994424
-13,Sachsen-Anhalt,19.5%,2180448
-14,Sachsen,17.2%,4089467
-15,Schleswig-Holstein,14.5%,2965691
-16, Thuringen,17.0%,2122335
+﻿Object_id,States, HDI,gdp_per_capita population_growth
+1,Baden,0.956,45108,11339260
+2,Bayern,0.95,4649813435062 
+3, Berlin, 0.959,42221,3782202
+4, Brandenburg,0.918,29282,2581667
+5,Bremen,0.954,46468,691703
+6,Hamburg,0.972,64022,1910160
+7,Hessen,0.95,44750,6420729
+8,Mecklenburg-Vorpommern,0.916,28590,1629464
+9,Niedersachsen,0.93,37005,8161981
+10,Nordrhein-westfalen,0.939,38876,18190422
+11,Rheinland-Pfalz,0.929,34673,4174311
+12,Saarland,0.931,34125,994424
+13,Sachsen-Anhalt,0.911,28652,2180448
+14,Sachsen,0.933,30903,4089467
+15,Schleswig-Holstein,0.921,33452,2965691
+16, Thuringen,0.923,28953,2122335
