@@ -1,0 +1,47 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/Germany_data1.csv",
+      "format": { "type": "csv", "parse": { "population": "number" } }
+    },
+       "title": {
+        "text": "GDP per Capita vs Economic Development",
+        "subtitle":["GDP per Capita (x), Human Development Index (y). ","Size of points based on population", ""],
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"
+      },
+    "mark": { "type": "circle", "color": "blue", "opacity": 0.8 },
+    "height": 300,
+    "width": 300,
+    "encoding": {
+      "x": {
+        "field": "gdp_per_capita",
+        "type": "quantitative",
+        "scale": { "domain": [28000, 65000] },
+        "axis": { "grid": false },
+        "title": "GDP per Capita"
+      },
+      "y": {
+        "field": "HDI",
+        "type": "quantitative",
+        "scale": { "domain": [0.9, 1] },
+        "axis": { "grid": false },
+        "title": "HDI"
+      },
+      "size": {
+        "field": "population",
+        "type": "quantitative",
+        "scale": { "range": [10, 800] },
+        "legend": null
+      },
+      "tooltip": [
+        { "field": "States", "type": "ordinal", "title": "State" },
+        { "field": "HDI", "type": "quantitative", "title": "HDI", "format": ".3f" },
+        { "field": "gdp_per_capita", "type": "quantitative", "title": "GDP per Capita", "format": ",.0f" },
+        { "field": "population", "type": "quantitative", "title": "Population", "format": ",.0f" }
+      ]
+    }
+  }
+  

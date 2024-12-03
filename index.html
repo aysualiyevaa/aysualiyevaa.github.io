@@ -129,7 +129,7 @@
                     <figure id= "Location8"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
               <!-- This is a script, it's a way to run JavaScript code on the page -->
             </p>  Improved chart:
-            In order to visualize better, the months were added on the x-axis, and the color shade was darkened to show to pattern better.  
+            In order to visualize better, the months were added on the x-axis, and the color shade was darkened to show the pattern better.  
             <figure id= "Location9"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
                  </section>
                  <div class="chart-description">
@@ -175,11 +175,20 @@
    Map 1: The given chart illustrates the map of Germany consisting of 16 states. 
    </p>
     <figure id= "Location20"></figure> 
-</p>
    Map 2: The updated chart illustrates the map of 16 German states with relevant population statistics. 
  <figure id= "Location21"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
 </section>
-
+</section>
+<div class="chart-description">
+<h2>Portfolio task 9: 
+      <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+   Chart 1: ...
+   </p>
+    <figure id= "Location24"></figure> 
+    Chart 2: ...
+   </p>
+    <figure id= "Location25"></figure> 
+</section>
         <script>
             // This is a comment in JavaScript - it's a different language to HTML and CSS
     
@@ -203,6 +212,8 @@
             let figure_20_spec= "JNKA (new).json"
             let figure_21_spec= "Map1.json"
             let figure_22_spec= "Map2.json"
+            let figure_25_spec= "Spain_Unemployment_data.json"
+            let figure_26_spec= "Germany_bubble_chart.json"
                                                                                                                         // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
     
 
@@ -232,6 +243,8 @@
             vegaEmbed ('#Location19', figure_20_spec)
             vegaEmbed ('#Location20', figure_21_spec)
             vegaEmbed ('#Location21', figure_22_spec)
+            vegaEmbed ('#Location24', figure_25_spec)
+            vegaEmbed ('#Location25', figure_26_spec)
         </script>
 <body>
     

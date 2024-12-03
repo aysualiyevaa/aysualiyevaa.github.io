@@ -1,0 +1,98 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Spain Unemployment Rates by Gender, displaying data from 2014 to 2023.",
+    "data": {
+      "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/Spain_unemployment.csv"
+    },
+    "config": {
+      "style": {
+        "cell": {
+          "stroke": "transparent"
+        }
+      }
+    },
+    "title": {
+      "text": "Spain Unemployment Rates by Gender",
+      "subtitle": ["Spain Unemployment, 2014-2023", "Source: Statista"],
+      "fontSize": 16,
+      "anchor": "start",
+      "subtitleFontSize": 12,
+      "subtitleFontWeight": "normal",
+      "subtitleFontStyle": "italic"
+    },
+    "width": 600,
+    "height": 400,
+    "params": [
+      {
+        "name": "YearSelect",
+        "value": 2023,
+        "bind": {
+          "input": "range",
+          "min": 2014,
+          "max": 2023,
+          "step": 1,
+          "name": "Year:"
+        }
+      }
+    ],
+    "transform": [
+      {
+        "calculate": "replace(datum.Unemployment, '%', '')",
+        "as": "Unemployment_clean"
+      },
+      {
+        "calculate": "toNumber(datum.Unemployment_clean) / 100",
+        "as": "Unemployment_rate"
+      },
+      {
+        "filter": "datum.Year == YearSelect"
+      }
+    ],
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Gender",
+        "type": "nominal",
+        "title": "Gender",
+        "axis": {
+          "labelFontSize": 14,
+          "titleFontSize": 14
+        }
+      },
+      "y": {
+        "field": "Unemployment_rate",
+        "type": "quantitative",
+        "title": "Unemployment Rate",
+        "aggregate": "average",
+        "axis": {
+          "labelFormat": ".0%",
+          "titleFontSize": 14
+        }
+      },
+      "color": {
+        "field": "Gender",
+        "scale": {
+          "scheme": "dark2"
+        },
+        "legend": {
+          "title": "Gender"
+        }
+      },
+      "tooltip": [
+        {
+          "field": "Gender",
+          "title": "Gender"
+        },
+        {
+          "field": "Unemployment_rate",
+          "title": "Unemployment Rate",
+          "format": ".1%"
+        },
+        {
+          "field": "Year",
+          "title": "Year"
+        }
+      ]
+    }
+  }
+  
