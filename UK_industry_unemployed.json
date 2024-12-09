@@ -1,0 +1,87 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 450,
+    "height": 300,
+     "title": {
+      "text": "Unemployment Across 5 Industries in the UK for 2023",
+       "subtitle": [
+        "2023 Months (x), Unemployed (thousands) by industry (y). ",
+        "Source: Office for National Statistics"
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "fontSize": 16,
+      "fontWeight": "bold",
+      "anchor": "middle"
+      },
+    "data": {
+      "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/UK_unemployed_data_comma.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "Date": "date",
+          "Unemployed(thousands)": "number"
+        }
+      }
+    },
+    "mark": "area",
+    "params": [
+      {
+        "name": "industry",
+        "select": {
+          "type": "point",
+          "fields": ["Industry"]
+        },
+        "bind": "legend"
+      }
+    ],
+    "encoding": {
+      "x": {
+        "timeUnit": "yearmonth",
+        "field": "Date",
+        "axis": {
+          "domain": false,
+          "format": "%Y-%m",
+          "tickSize": 0
+        }
+      },
+      "y": {
+        "aggregate": "sum",
+        "field": "Unemployed(thousands)",
+        "stack": "center",
+        "axis": {
+          "title": "Unemployed (thousands)"
+        }
+      },
+      "color": {
+        "field": "Industry",
+        "scale": {
+          "scheme": "category20b"
+        }
+      },
+      "opacity": {
+        "condition": {
+          "param": "industry",
+          "value": 1
+        },
+        "value": 0.2
+      },
+      "tooltip": [
+        {
+          "field": "Date",
+          "type": "temporal",
+          "title": "Date"
+        },
+        {
+          "field": "Unemployed(thousands)",
+          "type": "quantitative",
+          "title": "Unemployed (thousands)"
+        },
+        {
+          "field": "Industry",
+          "type": "nominal",
+          "title": "Industry"
+        }
+      ]
+    }
+  }
