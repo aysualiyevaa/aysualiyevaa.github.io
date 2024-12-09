@@ -1,64 +1,64 @@
 ﻿Date;Industry;Unemployed(thousands)
-01.01.23;Agriculture, forestry, fishing, mining, energy & water;8
-01.01.23;Manufacturing;69
-01.01.23;Construction;52
-01.01.23;Wholesale, retail & repair of motor vehicles;157
-01.01.23;Transport & storage;56
-01.02.23;Agriculture, forestry, fishing, mining, energy & water;11
-01.02.23;Manufacturing;76
-01.02.23;Construction;52
-01.02.23;Wholesale, retail & repair of motor vehicles;168
-01.02.23;Transport & storage;61
-01.03.23;Agriculture, forestry, fishing, mining, energy & water;11
-01.03.23;Manufacturing;77
-01.03.23;Construction;59
-01.03.23;Wholesale, retail & repair of motor vehicles;159
-01.03.23;Transport & storage;62
-01.04.23;Agriculture, forestry, fishing, mining, energy & water;14
-01.04.23;Manufacturing;79
-01.04.23;Construction;55
-01.04.23;Wholesale, retail & repair of motor vehicles;146
-01.04.23;Transport & storage;63
-01.05.23;Agriculture, forestry, fishing, mining, energy & water;11
-01.05.23;Manufacturing;93
-01.05.23;Construction;44
-01.05.23;Wholesale, retail & repair of motor vehicles;173
-01.05.23;Transport & storage;72
-01.06.23;Agriculture, forestry, fishing, mining, energy & water;15
-01.06.23;Manufacturing;96
-01.06.23;Construction;37
-01.06.23;Wholesale, retail & repair of motor vehicles;189
-01.06.23;Transport & storage;78
-01.07.23;Agriculture, forestry, fishing, mining, energy & water;17
-01.07.23;Manufacturing;92
-01.07.23;Construction;40
-01.07.23;Wholesale, retail & repair of motor vehicles;208
-01.07.23;Transport & storage;83
-01.08.23;Agriculture, forestry, fishing, mining, energy & water;12
-01.08.23;Manufacturing;83
-01.08.23;Construction;36
-01.08.23;Wholesale, retail & repair of motor vehicles;171
-01.08.23;Transport & storage;74
-01.09.23;Agriculture, forestry, fishing, mining, energy & water;12
-01.09.23;Manufacturing;75
-01.09.23;Construction;33
-01.09.23;Wholesale, retail & repair of motor vehicles;162
-01.09.23;Transport & storage;65
-01.10.23;Agriculture, forestry, fishing, mining, energy & water;7
-01.10.23;Manufacturing;62
-01.10.23;Construction;28
-01.10.23;Wholesale, retail & repair of motor vehicles;148
-01.10.23;Transport & storage;57
-01.11.23;Agriculture, forestry, fishing, mining, energy & water;14
-01.11.23;Manufacturing;55
-01.11.23;Construction;35
-01.11.23;Wholesale, retail & repair of motor vehicles;131
-01.11.23;Transport & storage;55
-01.12.23;Agriculture, forestry, fishing, mining, energy & water;16
-01.12.23;Manufacturing;64
-01.12.23;Construction;38
-01.12.23;Wholesale, retail & repair of motor vehicles;112
-01.12.23;Transport & storage;65
+2023-01-01;Agriculture, forestry, fishing, mining, energy & water;8
+2023-01-01;Manufacturing;69
+2023-01-01;Construction;52
+2023-01-01;Wholesale, retail & repair of motor vehicles;157
+2023-01-01;Transport & storage;56
+2023-02-01;Agriculture, forestry, fishing, mining, energy & water;11
+2023-02-01;Manufacturing;76
+2023-02-01;Construction;52
+2023-02-01;Wholesale, retail & repair of motor vehicles;168
+2023-02-01;Transport & storage;61
+2023-03-01;Agriculture, forestry, fishing, mining, energy & water;11
+2023-03-01;Manufacturing;77
+2023-03-01;Construction;59
+2023-03-01;Wholesale, retail & repair of motor vehicles;159
+2023-03-01;Transport & storage;62
+2023-04-01;Agriculture, forestry, fishing, mining, energy & water;14
+2023-04-01;Manufacturing;79
+2023-04-01;Construction;55
+2023-04-01;Wholesale, retail & repair of motor vehicles;146
+2023-04-01;Transport & storage;63
+2023-05-01;Agriculture, forestry, fishing, mining, energy & water;11
+2023-05-01;Manufacturing;93
+2023-05-01;Construction;44
+2023-05-01;Wholesale, retail & repair of motor vehicles;173
+2023-05-01;Transport & storage;72
+2023-06-01;Agriculture, forestry, fishing, mining, energy & water;15
+2023-06-01;Manufacturing;96
+2023-06-01;Construction;37
+2023-06-01;Wholesale, retail & repair of motor vehicles;189
+2023-06-01;Transport & storage;78
+2023-07-01;Agriculture, forestry, fishing, mining, energy & water;17
+2023-07-01;Manufacturing;92
+2023-07-01;Construction;40
+2023-07-01;Wholesale, retail & repair of motor vehicles;208
+2023-07-01;Transport & storage;83
+2023-08-01;Agriculture, forestry, fishing, mining, energy & water;12
+2023-08-01;Manufacturing;83
+2023-08-01;Construction;36
+2023-08-01;Wholesale, retail & repair of motor vehicles;171
+2023-08-01;Transport & storage;74
+2023-09-01;Agriculture, forestry, fishing, mining, energy & water;12
+2023-09-01;Manufacturing;75
+2023-09-01;Construction;33
+2023-09-01;Wholesale, retail & repair of motor vehicles;162
+2023-09-01;Transport & storage;65
+2023-10-01;Agriculture, forestry, fishing, mining, energy & water;7
+2023-10-01;Manufacturing;62
+2023-10-01;Construction;28
+2023-10-01;Wholesale, retail & repair of motor vehicles;148
+2023-10-01;Transport & storage;57
+2023-11-01;Agriculture, forestry, fishing, mining, energy & water;14
+2023-11-01;Manufacturing;55
+2023-11-01;Construction;35
+2023-11-01;Wholesale, retail & repair of motor vehicles;131
+2023-11-01;Transport & storage;55
+2023-12-01;Agriculture, forestry, fishing, mining, energy & water;16
+2023-12-01;Manufacturing;64
+2023-12-01;Construction;38
+2023-12-01;Wholesale, retail & repair of motor vehicles;112
+2023-12-01;Transport & storage;65
 ;;
 ;;
 ;;
