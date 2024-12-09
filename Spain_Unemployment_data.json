@@ -1,116 +1,116 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {
-    "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/Spain_unemployment.csv"
-  },
-  "width": 400,
-  "height": 300,
-  "title": {
-    "text": "Spain Unemployment Rates by Gender",
-    "subtitle": ["Spain Unemployment, 2014-2023", "Source: Statista"],
-    "fontSize": 16,
-    "anchor": "start",
-    "subtitleFontSize": 12,
-    "subtitleFontWeight": "normal",
-    "subtitleFontStyle": "italic"
-  },
-  "transform": [
-    {
-      "calculate": "replace(datum.Unemployment, '%', '')",
-      "as": "Unemployment_clean"
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/Spain_unemployment.csv"
     },
-    {
-      "calculate": "toNumber(datum.Unemployment_clean) / 100",
-      "as": "Unemployment_rate"
+    "width": 400,
+    "height": 300,
+    "title": {
+      "text": "Spain Unemployment Rates by Gender",
+      "subtitle": ["Spain Unemployment, 2014-2023", "Source: Statista"],
+      "fontSize": 16,
+      "anchor": "start",
+      "subtitleFontSize": 12,
+      "subtitleFontWeight": "normal",
+      "subtitleFontStyle": "italic"
     },
-    {
-      "filter": "datum.Unemployment_rate != null && datum.Year != null"
-    }
-  ],
-  "layer": [
-    {
-      "mark": "line",
-      "encoding": {
-        "x": {
-          "field": "Year",
-          "type": "temporal",
-          "title": "Year"
-        },
-        "y": {
-          "field": "Unemployment_rate",
-          "type": "quantitative",
-          "title": "Unemployment Rate",
-          "axis": {
-            "labelFormat": ".0%",
-            "titleFontSize": 14
-          }
-        },
-        "color": {
-          "field": "Gender",
-          "type": "nominal",
-          "legend": {"title": "Gender"}
-        }
+    "transform": [
+      {
+        "calculate": "replace(datum.Unemployment, '%', '')",
+        "as": "Unemployment_clean"
+      },
+      {
+        "calculate": "toNumber(datum.Unemployment_clean) / 100",
+        "as": "Unemployment_rate"
+      },
+      {
+        "filter": "datum.Unemployment_rate != null && datum.Year != null"
       }
-    },
-    {
-      "params": [
-        {
-          "name": "hover",
-          "select": {
-            "type": "point",
-            "encodings": ["x"],
-            "nearest": true,
-            "on": "pointerover"
-          }
-        }
-      ],
-      "mark": "point",
-      "encoding": {
-        "opacity": {
-          "condition": {
-            "param": "hover",
-            "empty": false,
-            "value": 1
+    ],
+    "layer": [
+      {
+        "mark": "line",
+        "encoding": {
+          "x": {
+            "field": "Year",
+            "type": "temporal",
+            "title": "Year"
           },
-          "value": 0
-        }
-      }
-    },
-    {
-      "transform": [{"filter": {"param": "hover", "empty": false}}],
-      "layer": [
-        {
-          "mark": {"type": "rule", "color": "gray"},
-          "encoding": {
-            "x": {"type": "temporal", "field": "Year", "aggregate": "min"}
-          }
-        },
-        {
-          "encoding": {
-            "text": {"type": "quantitative", "field": "Unemployment_rate"},
-            "x": {"type": "temporal", "field": "Year"},
-            "y": {"type": "quantitative", "field": "Unemployment_rate"}
-          },
-          "layer": [
-            {
-              "mark": {
-                "type": "text",
-                "stroke": "white",
-                "strokeWidth": 2,
-                "align": "left",
-                "dx": 5,
-                "dy": -5
-              }
-            },
-            {
-              "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5},
-              "encoding": {
-                "color": {"type": "nominal", "field": "Gender"}
-              }
+          "y": {
+            "field": "Unemployment_rate",
+            "type": "quantitative",
+            "title": "Unemployment Rate",
+            "axis": {
+              "labelFormat": ".0%",
+              "titleFontSize": 14
             }
-          ]
+          },
+          "color": {
+            "field": "Gender",
+            "type": "nominal",
+            "legend": {"title": "Gender"}
+          }
         }
-      ]
-    }
-  ]
-}
+      },
+      {
+        "params": [
+          {
+            "name": "hover",
+            "select": {
+              "type": "point",
+              "encodings": ["x"],
+              "nearest": true,
+              "on": "pointerover"
+            }
+          }
+        ],
+        "mark": "point",
+        "encoding": {
+          "opacity": {
+            "condition": {
+              "param": "hover",
+              "empty": false,
+              "value": 1
+            },
+            "value": 0
+          }
+        }
+      },
+      {
+        "transform": [{"filter": {"param": "hover", "empty": false}}],
+        "layer": [
+          {
+            "mark": {"type": "rule", "color": "gray"},
+            "encoding": {
+              "x": {"type": "temporal", "field": "Year", "aggregate": "min"}
+            }
+          },
+          {
+            "encoding": {
+              "text": {"type": "quantitative", "field": "Unemployment_rate"},
+              "x": {"type": "temporal", "field": "Year"},
+              "y": {"type": "quantitative", "field": "Unemployment_rate"}
+            },
+            "layer": [
+              {
+                "mark": {
+                  "type": "text",
+                  "stroke": "white",
+                  "strokeWidth": 2,
+                  "align": "left",
+                  "dx": 5,
+                  "dy": -5
+                }
+              },
+              {
+                "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5},
+                "encoding": {
+                  "color": {"type": "nominal", "field": "Gender"}
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
