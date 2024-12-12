@@ -1,0 +1,121 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Scatter plot of GDP Index vs. Unemployment Rate with regression line.",
+    "height": 300,
+    "width": 300,
+  
+    "title": {
+      "text": "GDP Index vs. Unemployment Rate in the UK from 2019 to 2024",
+      "subtitle": [
+        "GDP Index (x), Unemployment Rate (y).",
+        "Source: Office for National Statistics"
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "fontSize": 16,
+      "anchor": "start",
+      "font": "Arial"
+    },
+    "data": {
+      "values": [
+        {"date": "2019-01-01", "GDP_index": 96.7, "Unemployment_rate": 4},
+        {"date": "2019-02-01", "GDP_index": 97.3, "Unemployment_rate": 3.9},
+        {"date": "2019-03-01", "GDP_index": 97.3, "Unemployment_rate": 3.9},
+        {"date": "2019-04-01", "GDP_index": 97, "Unemployment_rate": 3.9},
+        {"date": "2019-05-01", "GDP_index": 97.4, "Unemployment_rate": 4},
+        {"date": "2019-06-01", "GDP_index": 97.9, "Unemployment_rate": 3.9},
+        {"date": "2019-07-01", "GDP_index": 98.2, "Unemployment_rate": 4},
+        {"date": "2019-08-01", "GDP_index": 98, "Unemployment_rate": 3.9},
+        {"date": "2019-09-01", "GDP_index": 98.5, "Unemployment_rate": 3.9},
+        {"date": "2019-10-01", "GDP_index": 98.3, "Unemployment_rate": 3.9},
+        {"date": "2019-11-01", "GDP_index": 98.1, "Unemployment_rate": 3.9},
+        {"date": "2019-12-01", "GDP_index": 98.5, "Unemployment_rate": 4},
+        {"date": "2020-01-01", "GDP_index": 98.6, "Unemployment_rate": 4.1},
+        {"date": "2020-02-01", "GDP_index": 98.1, "Unemployment_rate": 4.1},
+        {"date": "2020-03-01", "GDP_index": 91, "Unemployment_rate": 4.2},
+        {"date": "2020-04-01", "GDP_index": 73.2, "Unemployment_rate": 4.2},
+        {"date": "2020-05-01", "GDP_index": 74.7, "Unemployment_rate": 4.2},
+        {"date": "2020-06-01", "GDP_index": 81.7, "Unemployment_rate": 4.4},
+        {"date": "2020-07-01", "GDP_index": 87.1, "Unemployment_rate": 4.7},
+        {"date": "2020-08-01", "GDP_index": 90, "Unemployment_rate": 5},
+        {"date": "2020-09-01", "GDP_index": 91.3, "Unemployment_rate": 5.2},
+        {"date": "2020-10-01", "GDP_index": 91.7, "Unemployment_rate": 5.2},
+        {"date": "2020-11-01", "GDP_index": 89.7, "Unemployment_rate": 5.3},
+        {"date": "2020-12-01", "GDP_index": 91.1, "Unemployment_rate": 5.3},
+        {"date": "2021-01-01", "GDP_index": 88.1, "Unemployment_rate": 5.2},
+        {"date": "2021-02-01", "GDP_index": 89.4, "Unemployment_rate": 5.1},
+        {"date": "2021-03-01", "GDP_index": 92, "Unemployment_rate": 5},
+        {"date": "2021-04-01", "GDP_index": 95.1, "Unemployment_rate": 5},
+        {"date": "2021-05-01", "GDP_index": 96.5, "Unemployment_rate": 4.8},
+        {"date": "2021-06-01", "GDP_index": 97.3, "Unemployment_rate": 4.7},
+        {"date": "2021-07-01", "GDP_index": 97, "Unemployment_rate": 4.6},
+        {"date": "2021-08-01", "GDP_index": 97.9, "Unemployment_rate": 4.4},
+        {"date": "2021-09-01", "GDP_index": 98.5, "Unemployment_rate": 4.3},
+        {"date": "2021-10-01", "GDP_index": 98.8, "Unemployment_rate": 4.2},
+        {"date": "2021-11-01", "GDP_index": 99.3, "Unemployment_rate": 4.2},
+        {"date": "2021-12-01", "GDP_index": 99.2, "Unemployment_rate": 4.1},
+        {"date": "2022-01-01", "GDP_index": 99.4, "Unemployment_rate": 4},
+        {"date": "2022-02-01", "GDP_index": 100, "Unemployment_rate": 3.9},
+        {"date": "2022-03-01", "GDP_index": 99.9, "Unemployment_rate": 4},
+        {"date": "2022-04-01", "GDP_index": 99.9, "Unemployment_rate": 3.9},
+        {"date": "2022-05-01", "GDP_index": 100.5, "Unemployment_rate": 3.9},
+        {"date": "2022-06-01", "GDP_index": 99.5, "Unemployment_rate": 3.7},
+        {"date": "2022-07-01", "GDP_index": 100.1, "Unemployment_rate": 3.6},
+        {"date": "2022-08-01", "GDP_index": 100.2, "Unemployment_rate": 3.8},
+        {"date": "2022-09-01", "GDP_index": 99.6, "Unemployment_rate": 3.9},
+        {"date": "2022-10-01", "GDP_index": 100.5, "Unemployment_rate": 3.8},
+        {"date": "2022-11-01", "GDP_index": 100.5, "Unemployment_rate": 3.9},
+        {"date": "2022-12-01", "GDP_index": 100.1, "Unemployment_rate": 3.8},
+        {"date": "2023-01-01", "GDP_index": 100.3, "Unemployment_rate": 3.9},
+        {"date": "2023-02-01", "GDP_index": 100.7, "Unemployment_rate": 4},
+        {"date": "2023-03-01", "GDP_index": 100.4, "Unemployment_rate": 3.9},
+        {"date": "2023-04-01", "GDP_index": 100.5, "Unemployment_rate": 4},
+        {"date": "2023-05-01", "GDP_index": 100.1, "Unemployment_rate": 4.2},
+        {"date": "2023-06-01", "GDP_index": 100.8, "Unemployment_rate": 4.3},
+        {"date": "2023-07-01", "GDP_index": 100.3, "Unemployment_rate": 4.2},
+        {"date": "2023-08-01", "GDP_index": 100.3, "Unemployment_rate": 4.1},
+        {"date": "2023-09-01", "GDP_index": 100.4, "Unemployment_rate": 4},
+        {"date": "2023-10-01", "GDP_index": 99.9, "Unemployment_rate": 3.9},
+        {"date": "2023-11-01", "GDP_index": 100.1, "Unemployment_rate": 3.8},
+        {"date": "2023-12-01", "GDP_index": 100.1, "Unemployment_rate": 4},
+        {"date": "2024-01-01", "GDP_index": 100.4, "Unemployment_rate": 4.2}
+      ]
+    },
+    "layer": [
+      {
+        "mark": "point",
+        "encoding": {
+          "x": {
+            "field": "GDP_index",
+            "type": "quantitative",
+            "title": "GDP Index",
+             "scale": {"domain": [70, 110]}
+           
+          },
+          "y": {
+            "field": "Unemployment_rate",
+            "type": "quantitative",
+            "title": "Unemployment Rate",
+               "scale": {"domain": [3, 6]}
+            
+          },
+          "tooltip": [
+            {"field": "date", "type": "temporal", "title": "Date"},
+            {"field": "GDP_index", "type": "quantitative", "title": "GDP Index"},
+            {"field": "Unemployment_rate", "type": "quantitative", "title": "Unemployment Rate"}
+          ],
+          "color": {"value": "lightgreen"},
+          "strokeWidth": {"value": 2},
+          "stroke": {"value": "#4b9140"}
+        }
+      },
+      {
+        "mark": {"type": "line", "color": "black"},
+        "transform": [{"regression": "Unemployment_rate", "on": "GDP_index"}],
+        "encoding": {
+          "x": {"field": "GDP_index", "type": "quantitative"},
+          "y": {"field": "Unemployment_rate", "type": "quantitative"}
+        }
+      }
+    ]
+  }
