@@ -5,7 +5,7 @@
       "format": { "type": "csv", "parse": { "population": "number" } }
     },
        "title": {
-        "text": "GDP per Capita vs Economic Development",
+        "text": "GDP per Capita vs Economic Development in Germany for 2021",
         "subtitle":["GDP per Capita (x), Human Development Index (y). ","Size of points based on population", ""],
         "subtitleFontStyle":"italic",
         "subtitleFontSize":10,
