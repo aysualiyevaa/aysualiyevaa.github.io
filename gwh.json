@@ -1,0 +1,72 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/gwh_data.csv",
+      "format": {"type": "csv"}
+    },
+    "transform": [
+      {
+        "filter": "datum.Year == selectedYear && datum.sector != 'nuclear'"
+      }
+    ],
+    "mark": {
+      "type": "bar"
+    },
+    "width": 400,
+    "height": 300,
+    "title": {
+      "text": "Annual Electricity Production by Fuel in 5 Northern European countries for 2010-2024",
+      "subtitle": ["Country (x), Electricity Production by fuel (GWh) (y)", "Source: International Energy Agency"],
+      "fontSize": 16,
+      "anchor": "start",
+      "subtitleFontSize": 12,
+      "subtitleFontWeight": "normal",
+      "subtitleFontStyle": "italic"
+    },
+    "encoding": {
+      "x": {
+        "field": "Country",
+        "type": "nominal",
+        "axis": {
+          "title": "Country",
+          "grid": false,  
+          "ticks": false 
+        }
+      },
+      "y": {
+        "field": "Electricity Production",
+        "type": "quantitative",
+        "aggregate": "sum",
+        "axis": {
+          "title": "Total Electricity Production (GWh)",
+          "grid": false,  
+          "ticks": false  
+        }
+      },
+      "color": {
+        "field": "sector",
+        "type": "nominal",
+        "title": "Energy Source"
+      },
+      "tooltip": [
+        {"field": "Year", "type": "ordinal", "title": "Year"},
+        {"field": "Country", "type": "nominal", "title": "Country"},
+        {"field": "sector", "type": "nominal", "title": "Energy Source"},
+        {"field": "Electricity Production", "type": "quantitative", "title": "Production (GWh)"}
+      ]
+    },
+    "params": [
+      {
+        "name": "selectedYear",
+        "value": 2010,
+        "bind": {
+          "input": "range",
+          "min": 2010,
+          "max": 2024,
+          "step": 1,
+          "name": "Year: "
+        }
+      }
+    ]
+  }
+  
