@@ -1,0 +1,62 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/co2_data.csv",
+      "format": {"type": "csv"}
+    },
+    "title": {
+      "text": "Carbon dioxide (CO2) emissions (total) of 5 Nordic Countries (2000-2022)",
+      "subtitle": ["Emissions in million tonnes (Mt)", "Source: WorldBank", "Note: Interactivity is shown once clicked on the industry names in the legend column. "],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 12,
+      "anchor": "start",
+      "color": "#013220"
+    },
+    "mark": {
+      "type": "area",
+      "line": true,
+      "opacity": 0.8
+    },
+    "width": 600,
+    "height": 400,
+    "params": [
+      {
+        "name": "country",
+        "select": {"type": "point", "fields": ["Country"]},
+        "bind": "legend"
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year",
+        "axis": {"labelAngle": 0}
+      },
+      "y": {
+        "field": "Emissions(Mt)",
+        "type": "quantitative",
+        "title": "CO2 Emissions (Mt)"
+      },
+      "color": {
+        "field": "Country",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Denmark", "Finland", "Iceland", "Norway", "Sweden"],
+          "range": ["#5e7564", "#748f7b", "#6baa7f", "#9bbfa5", "#b6e3c2"]
+        },
+        "legend": {
+          "title": "Country",
+          "labelFontSize": 10,
+          "symbolSize": 100
+        }
+      },
+      "opacity": {"condition": {"param": "country", "value": 1}, "value": 0.2},
+      "tooltip": [
+        {"field": "Country", "type": "nominal", "title": "Country"},
+        {"field": "Year", "type": "ordinal", "title": "Year"},
+        {"field": "Emissions(Mt)", "type": "quantitative", "title": "Emissions (Mt)", "format": ".2f"}
+      ]
+    }
+  }
+  
