@@ -6,7 +6,7 @@
     },
     "title": {
       "text": "Carbon dioxide (CO2) emissions (total) of 5 Nordic Countries (2000-2022)",
-      "subtitle": ["Emissions in million tonnes (Mt)", "Source: WorldBank", "Note: Interactivity is shown once clicked on the industry names in the legend column. "],
+      "subtitle": ["Emissions in million tonnes (Mt)", "Source: WorldBank", "Note: Interactivity is shown once clicked on the country names in the legend column. "],
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 12,
       "anchor": "start",
