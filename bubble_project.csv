@@ -1,5 +1,5 @@
-﻿Country,Population,Employment,Capacity
-Denmark,5946952,32089,1877.4
-Norway,5519594,19307,11815.1
-Sweden,10536632,74008,8095.5
-Finland,5583911,29887,3384.3
+﻿Country,Population,Employment,Gendershare
+Denmark,5946952,32089,12.5%
+Norway,5519594,19307,19.4%
+Sweden,10536632,74008,29.6%
+Finland,5583911,29887,23.4%
