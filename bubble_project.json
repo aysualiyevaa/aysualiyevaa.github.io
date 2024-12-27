@@ -7,17 +7,17 @@
       "parse": {
         "Population": "number",
         "Employment": "number",
-        "Capacity": "number"
+        "Female_managers": "number"  
       }
     }
   },
   "title": {
-    "text": "Renewable Energy Employment vs Capacity in 4 Nordic Countries in 2023",
+    "text": "Renewable Energy Employment and Female Managers in Energy Sector in 4 Nordic Countries in 2023",
     "color": "#013220",
     "subtitle": [
-      "Employment (y), Renewable Energy Capacity (x).",
-      "Source: WorldBank, International Energy Agency, International Renewable Energy Agency",
-      "Size of points based on Population."
+      "Y-axis: Renewable Energy Employment, X-axis: Number of Female Managers in Energy Sector.",
+      "Bubble size based on Population.",
+      "Source: WorldBank, International Renewable Energy Agency, International Energy Agency"
     ],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 12,
@@ -25,27 +25,36 @@
     "fontSize": 16
   },
   "mark": {"type": "circle", "opacity": 0.8},
-  "height": 400,
-  "width": 400,
+  "height": 500,
+  "width": 500,  
   "encoding": {
     "x": {
-      "field": "Capacity",
+      "field": "Female_managers",  
       "type": "quantitative",
-      "axis": {"grid": false},
-      "title": "Renewable Energy Capacity (MW)",
-      "scale": {"domain": [0, 13000]}
+      "title": "Number of Female Managers in Energy Sector",
+      "axis": {
+        "grid": false 
+      }
     },
     "y": {
-      "field": "Employment",
+      "field": "Employment", 
       "type": "quantitative",
-      "axis": {"grid": false},
-      "title": "Renewable Energy Employment"
+      "title": "Renewable Energy Employment",
+      "scale": {
+        "domain": [0, 80000]  
+      },
+      "axis": {
+        "grid": false 
+      }
     },
     "size": {
-      "field": "Population",
+      "field": "Population",  
       "type": "quantitative",
-      "scale": {"range": [100, 5000]},
-      "legend": {"title": "Population"}
+      "scale": {"range": [500, 10000]},  
+      "legend": {
+        "title": "Population",
+        "format": ",.0f"
+      }
     },
     "color": {
       "field": "Country",
@@ -54,28 +63,13 @@
         "domain": ["Denmark", "Norway", "Sweden", "Finland"],
         "range": ["#004d26", "#006400", "#2e8b57", "#4c9a2a"]
       },
-      "legend": {"title": "Country", "labelFontSize": 10, "symbolSize": 50}
+      "legend": {"title": "Country"}
     },
     "tooltip": [
       {"field": "Country", "type": "ordinal", "title": "Country"},
-      {
-        "field": "Employment",
-        "type": "quantitative",
-        "title": "Employment",
-        "format": ",.0f"
-      },
-      {
-        "field": "Capacity",
-        "type": "quantitative",
-        "title": "Capacity (MW)",
-        "format": ",.0f"
-      },
-      {
-        "field": "Population",
-        "type": "quantitative",
-        "title": "Population",
-        "format": ",.0f"
-      }
+      {"field": "Population", "type": "quantitative", "title": "Population", "format": ",.0f"},
+      {"field": "Employment", "type": "quantitative", "title": "Renewable Energy Employment", "format": ",.0f"},
+      {"field": "Female_managers", "type": "quantitative", "title": "Female Managers", "format": ",.0f"}
     ]
   },
   "selection": {
