@@ -1,179 +1,144 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {
-      "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/energy_consumption.csv"
-    },
-    "width": 500,
-    "height": 300,
-    "title": {
-      "text": "Renewable Energy Consumption in 5 Northern European countries",
-      "subtitle": ["Renewable Energy Consumption (% of total final energy consumption), 2000-2021", "Source: WorldBank"],
-      "fontSize": 16,
-      "anchor": "start",
-      "subtitleFontSize": 12,
-      "subtitleFontWeight": "normal",
-      "subtitleFontStyle": "italic"
-    },
-    "transform": [
-      {
-        "calculate": "replace(datum['Renewable Energy Consumption'], '%', '')",
-        "as": "Renewable_Energy_Consumption_clean"
-      },
-      {
-        "calculate": "toNumber(datum['Renewable_Energy_Consumption_clean'])",
-        "as": "Renewable_Energy_Consumption"
-      },
-      {
-        "filter": "datum['Renewable_Energy_Consumption'] != null && datum['Year'] != null"
-      }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/energy_consumption.csv"
+  },
+  "width": 500,
+  "height": 300,
+  "title": {
+    "text": "Renewable Energy Consumption in 4 Nordic countries",
+    "color": "#013220",
+    "subtitle": [
+      "Renewable Energy Consumption (% of total final energy consumption), 2000-2021",
+      "Source: WorldBank"
     ],
-    "encoding": {
-      "x": {
-        "field": "Year",
-        "type": "temporal",
-        "title": "Year",
-        "axis": {
-          "titleFontSize": 14
-        }
+    "fontSize": 16,
+    "anchor": "middle",
+    "subtitleFontSize": 12,
+    "subtitleFontWeight": "normal",
+    "subtitleFontStyle": "italic"
+  },
+  "transform": [
+    {
+      "calculate": "replace(datum['Renewable Energy'], '%', '')",
+      "as": "Renewable_Energy_Consumption_clean"
+    },
+    {
+      "calculate": "toNumber(datum['Renewable_Energy_Consumption_clean'])",
+      "as": "Renewable_Energy_Consumption"
+    },
+    {
+      "filter": "datum['Renewable_Energy_Consumption'] != null && datum['Year'] != null"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "Year",
+      "axis": {
+        "titleFontSize": 14,
+        "grid": false   
+      }
+    },
+    "y": {
+      "field": "Renewable_Energy_Consumption",
+      "type": "quantitative",
+      "title": "Renewable Energy Consumption (%)",
+      "axis": {
+        "labelFormat": ".1%",
+        "titleFontSize": 14,
+        "grid": false   
+      }
+    },
+    "color": {
+      "field": "Country",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Denmark", "Finland", "Norway", "Sweden"],
+        "range": ["#5e7564", "#748f7b", "#9bbfa5", "#b6e3c2"]
       },
-      "y": {
+      "legend": {"title": "Country"}
+    },
+    "tooltip": [
+      {
         "field": "Renewable_Energy_Consumption",
         "type": "quantitative",
-        "title": "Renewable Energy Consumption (%)",
-        "axis": {
-          "labelFormat": ".1%",  
-          "titleFontSize": 14
-        }
+        "title": "Renewable Energy Consumption (%)"
       },
-      "color": {
-        "field": "Country",
-        "type": "nominal",
-        "legend": {
-          "title": "Country"
-        }
+      {"field": "Country", "type": "nominal", "title": "Country"}
+    ]
+  },
+  "layer": [
+    {
+      "encoding": {
+        "color": {"field": "Country", "type": "nominal"},
+        "y": {"field": "Renewable_Energy_Consumption", "type": "quantitative"}
       },
-      "tooltip": [
+      "layer": [
+        {"mark": "line"},
         {
-          "field": "Renewable_Energy_Consumption",
-          "type": "quantitative",
-          "title": "Renewable Energy Consumption (%)"
-        },
-        {
-          "field": "Country",
-          "type": "nominal",
-          "title": "Country"
+          "params": [
+            {
+              "name": "hover",
+              "select": {
+                "type": "point",
+                "fields": ["Year"],
+                "nearest": true,
+                "on": "pointerover",
+                "clear": "pointerout"
+              }
+            }
+          ],
+          "mark": "point",
+          "encoding": {
+            "opacity": {
+              "condition": {"param": "hover", "empty": false, "value": 1},
+              "value": 0
+            }
+          }
         }
       ]
     },
-    "layer": [
-      {
-        "encoding": {
-          "color": {
-            "field": "Country",
-            "type": "nominal"
-          },
-          "y": {
-            "field": "Renewable_Energy_Consumption",
-            "type": "quantitative"
+    {
+      "transform": [{"filter": {"param": "hover", "empty": false}}],
+      "layer": [
+        {
+          "mark": {"type": "rule", "color": "gray"},
+          "encoding": {
+            "x": {"type": "temporal", "field": "Year", "aggregate": "min"}
           }
         },
-        "layer": [
-          {
-            "mark": "line"
-          },
-          {
-            "params": [
-              {
-                "name": "hover",
-                "select": {
-                  "type": "point",
-                  "fields": ["Year"],
-                  "nearest": true,
-                  "on": "pointerover",
-                  "clear": "pointerout"
-                }
-              }
-            ],
-            "mark": "point",
-            "encoding": {
-              "opacity": {
-                "condition": {
-                  "param": "hover",
-                  "empty": false,
-                  "value": 1
-                },
-                "value": 0
-              }
-            }
-          }
-        ]
-      },
-      {
-        "transform": [
-          {
-            "filter": {
-              "param": "hover",
-              "empty": false
-            }
-          }
-        ],
-        "layer": [
-          {
-            "mark": {
-              "type": "rule",
-              "color": "gray"
+        {
+          "encoding": {
+            "text": {
+              "field": "Renewable_Energy_Consumption",
+              "type": "quantitative"
             },
-            "encoding": {
-              "x": {
-                "type": "temporal",
-                "field": "Year",
-                "aggregate": "min"
-              }
+            "x": {"type": "temporal", "field": "Year"},
+            "y": {
+              "type": "quantitative",
+              "field": "Renewable_Energy_Consumption"
             }
           },
-          {
-            "encoding": {
-              "text": {
-                "field": "Renewable_Energy_Consumption",
-                "type": "quantitative"
-              },
-              "x": {
-                "type": "temporal",
-                "field": "Year"
-              },
-              "y": {
-                "type": "quantitative",
-                "field": "Renewable_Energy_Consumption"
+          "layer": [
+            {
+              "mark": {
+                "type": "text",
+                "stroke": "white",
+                "strokeWidth": 2,
+                "align": "left",
+                "dx": 5,
+                "dy": -5
               }
             },
-            "layer": [
-              {
-                "mark": {
-                  "type": "text",
-                  "stroke": "white",
-                  "strokeWidth": 2,
-                  "align": "left",
-                  "dx": 5,
-                  "dy": -5
-                }
-              },
-              {
-                "mark": {
-                  "type": "text",
-                  "align": "left",
-                  "dx": 5,
-                  "dy": -5
-                },
-                "encoding": {
-                  "color": {
-                    "type": "nominal",
-                    "field": "Country"
-                  }
-                }
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+            {
+              "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5},
+              "encoding": {"color": {"type": "nominal", "field": "Country"}}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
