@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renewable Energy Policies</title>
+    <title>Aysu's Project Page</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
@@ -64,10 +64,18 @@
         </h1>
     </header>
     
+  
     <section>
-        <p>Renewable energy transition in 5 North European countries: Denmark, Norway, Sweden, Finland, and Iceland.</p>
+        <h1>Aims</h1>
+        <p>Maintaining sustainable development has been one of the crucial challenges that each country in the world deals with. One of the widely taken approaches is to focus on the promotion of energy systems with less environmental damage through the adoption of renewable energy policies. Global leaders in the implementation of renewable energy strategies are considered to be Nordic countries, which are relevant to explore the path to achieve sustainable energy. For this reason, the main aim of this project is based on analysing the relevant renewable energy strategies taken by 4 Nordic countries, which are Denmark, Finland, Norway, and Sweden. The essential purpose is to compare and analyse how adopted renewable energy policies in recent years have affected the energy consumption patterns, employment of population in this sector, trend for greenhouse gas emissions, and whether the GDP rate affects the research and development spending on renewable energy sector. The project also aims to compare how the four countries target the patterns for various sectors of renewable energy, such as solar, wind, hydropower, etc., and reflect on whether the evolution of renewable and non-renewable energy electricity production differs substantially among the four countries. </p>
     </section>
-
+    
+    <section>
+        <h1>The Data and Challenges</h1>
+        <p>The majority of the utilized data was taken from the International Energy Agency (IEA) and WorldBank. Data and statistics were from the free data sets based on various energy systems available to download on the official website of IEA. Most of the data is updated on monthly and annual basis, focused on various aspects of energy policies adopted by countries, and provided data either through excel direct downloads, table generation, or illustrated charts, which allows to get sufficient information. Majority of the data was subtracted by looping and merging data to get it in combined dataset as “csv” file via Google Colab with the help of the extracted API links through “Inspect” function; I used the relevant URL codes of each country on Google Colab, which allowed me to loop through the API. While some of the “csv" files were uploaded to Github through which raw link was taken to generate charts via Vega Lite, some of the charts were generated in Google Colab itself after looping. One of the problems with IEA website was that the data was only provided on number of female managers in energy sector, which limits to focus specifically on renewable energy sector. Furthermore, some data on IEA was available on monthly basis; as I aimed to analyse on annual basis, to avoid confusion on the chart generation, I scraped the data only for January. 
+            International Renewable Energy Agency (IRENA) was also taken as a source for data extraction, which is an intergovernmental organization publishing statistics on renewable energy capacities of countries. Data for renewable energy employment was subtracted from IRENA dataset; however, the only available data was for 2023 year, and obtaining data was possible via either excel downloading or manually extracting data into separate excel sheet. API link only provided data on trend for global renewable energy employment. 
+             </p>
+    </section>
     
     <div class="chart-description">
         <figure id="Location1"></figure> 

@@ -1,0 +1,288 @@
+<!-- This HTML file provides a simple example of a portfolio page. It contains a header, a few sections, and a few charts. -->
+<!-- It works with the three css files in this folder: example1.css, example2.css and example3.css. -->
+<!-- The HTML file defines the structure of the page, and the CSS files define how it looks. -->
+<!-- The CSS examples are all designed to work with this page. Try swapping them out on line 29 and see what happens. -->
+
+<!-- Take a look around and make your own copy to adapt for your own use. -->
+
+<!-- This is a comment -->
+<!-- Comments are not displayed in the browser -->
+<!-- They can be used to leave notes in the code -->
+
+<!DOCTYPE html>
+<html> 
+    <!-- HTML is heirarchial: tags like this define elements on the page. 
+    Each tag does something different. For example:
+        - The <html> tag defines the whole document.
+        - The <h1> tag defines a large heading
+        - The <p> tag defines a paragraph
+        - Tags appear as an opening <div> and closing </div> pair
+    -->
+
+<head>    
+    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
+
+    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
+    <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
+    <link rel="stylesheet" type="text/css" href="portfolio_styles.css">
+    <title>My Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
+
+    <!-- This is a link to the vega-lite which we're using to make graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        #chartGrid {
+            display: flex;
+        }
+        
+    </style>
+    
+</head>
+
+
+<body> 
+<!-- The body tag contains the elements that visitors to our page will see. -->
+    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
+        <!-- This is a header, it is the largest text on the page -->
+        Aysu Aliyeva
+
+    </h1>
+    <p style="margin-top: 0px; color: darkblue">
+        <!-- we're setting the margin to 0px so the header and authour name are close together -->
+        Aysu Aliyeva | <a href="https://www.linkedin.com/in/aysu-aliyeva-473710222/ ">LinkedIn</a> | <a
+            href="https://github.com/aysualiyevaa">GitHub</a> | <a
+            href="https://aysualiyevaa.github.io/project">Project</a>
+    </p>
+    <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
+      Welcome to my website!
+
+    <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
+    <section>
+
+    <div class="chart-description">
+        <h2>Portfolio task 1: First Graph- obtained from https://www.richarddavies.io/library </h2>
+        <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            The chart describes cumulative % change in population for the several countries for the years from 2020 to 2100 obtained from the UN source. 
+        </p>
+    </div>
+    <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    <!-- Do you want to add more sections? -->
+        <!-- Try copying pasting the section above -->
+        <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
+        <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
+        <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            This chart shows the annual percentage change of inflation for the years between 1800 and 2021 based on the Retail Price Index (RPI). The adjusting function on year selection is helpful for the yearly based analysis of the inflation change.    
+        </p>
+    <figure id= "Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+
+    <div class="chart-description">
+       <h2>Portfolio task 2: obtained from Economic Observatory Data Hub</h2>
+       <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+         Shown line graph obtained from the Economic Observatory Data Hub shows the increasing trend for GDP of the USA on current prices given as $bn starting from the mid 20th century. 
+       </p>
+         <figure id= "Location4"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+   <!-- This is a script, it's a way to run JavaScript code on the page -->
+         </section>
+
+  </section>
+     <div class="chart-description">
+           <h2>Portfolio task 2:obtained from Economic Observatory Data Hub</h2>
+           <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+          The line chart illustrates rising trend for the debt as a ratio of GDP in Japan for the years starting from the late 20th century.
+           </p>
+             <figure id= "Location5"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+       <!-- This is a script, it's a way to run JavaScript code on the page -->
+          </section>
+ 
+</section>
+    <div class="chart-description">
+       <h2>Portfolio task 3: obtained from  Festival of Economics: Under-performing: How can we boost Britain’s low productivity? </h2>
+       <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+         Although productivity is mentioned by Festival of Economics as decreasing for the UK, it is shown that there is stable pattern for productivity.  
+ 
+         <figure id= "Location6"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+   <!-- This is a script, it's a way to run JavaScript code on the page -->
+     </section>
+       
+</section>
+        <div class="chart-description">
+           <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            Although GDP growth has seen a sharp drop in 2020, starting from 2021, it has been similar with previous years. 
+             <figure id= "Location7"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+       <!-- This is a script, it's a way to run JavaScript code on the page -->
+             </section>
+     </section>
+            <div class="chart-description">
+                  <h2>Portfolio task 4:</h2>
+                  <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                 The line chart obtained from "Washington Post" illustrates the unemployment rate in the U.S for the last 5 years. 
+                  </p> 
+                  <img src="image_from_Washington_Post.png">
+                </p> 
+                <p>Replicated chart:<p>
+                    <figure id= "Location8"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+              <!-- This is a script, it's a way to run JavaScript code on the page -->
+            </p> 
+            <p>
+                Improved chart: 
+            In order to visualize better, the months were added on the x-axis, and the color shade was darkened to show the pattern better. 
+            </p> 
+            <figure id= "Location9"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+                 </section>
+                 <div class="chart-description">
+                       <h2>Portfolio task 5: </h2>
+                       <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                     In order to analyse the school leaving age, I obtained data about the employing age in a descending order based on countries in Africa: <a href="https://colab.research.google.com/drive/1eJuqHv4MDISczzlenEBOjDoGi_VE-WMI#scrollTo=NLYMod2BZ47g">Colab Notebook</a>
+
+                     <figure id= "Location10"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+   <!-- This is a script, it's a way to run JavaScript code on the page -->
+         </section>
+
+ </section>
+        <div class="chart-description">
+              <h2> Portfolio task 6: </h2>
+              <p> 
+                The data is retrieved from ONS based on the 9 labour productivity time series: <a href="https://colab.research.google.com/drive/1n6Q4_6BUbhzP5FicWXGApvtn2sXjcDi2#scrollTo=5_ZPFsLFar0x&uniqifier=1">Colab Notebook</a>
+            </p>
+
+     <figure id= "Location11"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+<!-- This is a script, it's a way to run JavaScript code on the page -->
+<figure id= "Location12"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+<!-- This is a script, it's a way to run JavaScript code on the page -->
+<figure id= "Location13"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+<!-- This is a script, it's a way to run JavaScript code on the page -->
+<figure id= "Location14"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+<!-- This is a script, it's a way to run JavaScript code on the page -->
+<figure id= "Location15"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+<!-- This is a script, it's a way to run JavaScript code on the page -->
+<figure id= "Location16"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+<!-- This is a script, it's a way to run JavaScript code on the page -->
+<figure id= "Location17"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+<!-- This is a script, it's a way to run JavaScript code on the page -->
+<figure id= "Location18"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+<!-- This is a script, it's a way to run JavaScript code on the page -->
+<figure id= "Location19"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+<!-- This is a script, it's a way to run JavaScript code on the page -->
+</section>
+
+</section>
+<div class="chart-description">
+<h2>Portfolio task 7: </h2>
+      <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+   Map 1: The given chart illustrates the map of Germany consisting of 16 states. 
+   </p>
+    <figure id= "Location20"></figure> 
+<p>
+   Map 2: The updated chart illustrates the map of 16 German states with relevant population statistics. 
+</p>
+ <figure id= "Location21"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+</section>
+</section>
+<div class="chart-description">
+<h2>Portfolio task 8:  </h2>
+      <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+   Chart 1:... <a href="https://colab.research.google.com/drive/1Krxdcl0RgVdzyF0Hh-CCnhEsJxTXHpjm?usp=sharing">Colab Notebook</a>
+   </p>
+    <figure id= "Location22"></figure> 
+<p>
+        Chart 2: ... <a href="https://colab.research.google.com/drive/165f4RiQpd0Yv9x_XnUnb58LLpelC-LSB#scrollTo=r3bYpJjCNWE_">Colab Notebook</a>
+      <figure id= "Location23"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+</section>
+</section>
+<div class="chart-description">
+<h2>Portfolio task 9: </h2>
+      <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+   Chart 1:... 
+   </p>
+    <figure id= "Location24"></figure> 
+<p>
+    <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+        Chart 2:... 
+        </p>
+         <figure id= "Location25"></figure> 
+     <p>
+</section>
+</section>
+<div class="chart-description">
+<h2>Portfolio task 10: </h2>
+      <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+   Chart 1:... 
+   </p>
+    <figure id= "Location26"></figure> 
+<p>
+    <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+        Chart 2:... 
+        </p>
+         <figure id= "Location27"></figure> 
+     <p>
+</section>
+        <script>
+            // This is a comment in JavaScript - it's a different language to HTML and CSS
+    
+            let figure_2_spec = "wk1_declining_pop.json"
+            let figure_3_spec = "wk1_inflation.json"
+            let figure_4_spec = "USA_GDP.json"
+            let figure_5_spec = "wk2_Japan_debt_data.json"
+            let figure_7_spec = "wk4_chart1.json"
+            let figure_8_spec = "wk4_chart2.json"
+            let figure_9_spec= "portfolio4.json"
+            let figure_10_spec= "portfolio4_improved.json"
+            let figure_11_spec= "employment_age_bar_chart.json"
+            let figure_12_spec= "A4YM (new).json"
+            let figure_13_spec= "LZVC (new).json"
+            let figure_14_spec= "FZLP (new).json"
+            let figure_15_spec= "GYY5 (new).json"
+            let figure_16_spec= "DJE2 (new).json"
+            let figure_17_spec= "DJE9 (new).json"
+            let figure_18_spec= "FZLV (new).json"
+            let figure_19_spec= "DJE6 (new).json"
+            let figure_20_spec= "JNKA (new).json"
+            let figure_21_spec= "Map1.json"
+            let figure_22_spec= "Map2.json"
+            let figure_23_spec= "wine_prices_chart.json"
+            let figure_24_spec= "wine_line_chart1.json"
+            let figure_25_spec= "UK_unemployment_gdp_data.json"
+            let figure_26_spec= "Germany_bubble_chart.json"
+            let figure_27_spec= "Spain_Unemployment_data.json"
+            let figure_28_spec= "UK_industry_unemployed.json"
+                                                                                                                        // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+    
+
+            // Do you want to add more graphs?
+            // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
+            // e.g. 
+            // let figure_3_spec = ...
+            // vegaEmbed('#Location3', figure_3_spec)
+    
+            vegaEmbed('#Location2', figure_2_spec)
+            vegaEmbed('#Location3', figure_3_spec)
+            vegaEmbed('#Location4', figure_4_spec)
+            vegaEmbed('#Location5', figure_5_spec)
+            vegaEmbed ('#Location6', figure_7_spec)
+            vegaEmbed ('#Location7', figure_8_spec)
+            vegaEmbed ('#Location8', figure_9_spec)
+            vegaEmbed ('#Location9', figure_10_spec)
+            vegaEmbed ('#Location10', figure_11_spec)
+            vegaEmbed ('#Location11', figure_12_spec)
+            vegaEmbed ('#Location12', figure_13_spec)
+            vegaEmbed ('#Location13', figure_14_spec)
+            vegaEmbed ('#Location14', figure_15_spec)
+            vegaEmbed ('#Location15', figure_16_spec)
+            vegaEmbed ('#Location16', figure_17_spec)
+            vegaEmbed ('#Location17', figure_18_spec)
+            vegaEmbed ('#Location18', figure_19_spec)
+            vegaEmbed ('#Location19', figure_20_spec)
+            vegaEmbed ('#Location20', figure_21_spec)
+            vegaEmbed ('#Location21', figure_22_spec)
+            vegaEmbed ('#Location22', figure_23_spec)
+            vegaEmbed ('#Location23', figure_24_spec)
+            vegaEmbed ('#Location24', figure_25_spec)
+            vegaEmbed ('#Location25', figure_26_spec)
+            vegaEmbed ('#Location26', figure_27_spec)
+            vegaEmbed ('#Location27', figure_28_spec)
+        </script>
+<body>
+    
+</html>
