@@ -1,186 +1,116 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Grouped bar chart for electricity production across multiple years with scrolling for years.",
-     "title": {
-      "text": "Evolution of renewables and non-renewables power production in 5 Northern European Countries from 2014 to 2024",
-      "color": "#013220",
-      "subtitle": [
-        "Country (x), Electricity Production (GWh) (y).",
-        "Source: International Energy Agency"
-      ],
-      "subtitleFontStyle": "italic",
-      "subtitleFontSize": 10,
-      "fontSize": 16,
-      "anchor": "start",
-      "font": "Arial"
-    },
-    "width": 500,
-    "height": 300,
-    "params": [
-      {
-        "name": "selectedYear",
-        "value": 2014,
-        "bind": {
-          "input": "select",
-          "options": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
-          "name": "Year: "
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Grouped bar chart for electricity production across multiple years with scrolling for years.",
+  "title": {
+    "text": "Evolution of renewables and non-renewables electricity production in 4 Nordic Countries from 2010 to 2024",
+    "color": "#013220",
+    "subtitle": [
+      "Country (x), Electricity Production (GWh) (y).",
+      "Source: International Energy Agency"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "fontSize": 16,
+    "anchor": "middle",
+    "align": "center",
+    "font": "Arial"
+  },
+  "width": 800,
+  "height": 400,
+  "params": [
+    {
+      "name": "selectedYear",
+      "value": 2010,
+      "bind": {
+        "input": "select",
+        "options": [
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "name": "Year: "
       }
-    ],
-    "data": {
-      "values": [
-        {"Country": "Norway", "Year": 2014, "Sector": "renewable", "Electricity Production": 14242.2},
-        {"Country": "Norway", "Year": 2014, "Sector": "nonrenewable", "Electricity Production": 296.0},
-        {"Country": "Norway", "Year": 2015, "Sector": "renewable", "Electricity Production": 14372.5},
-        {"Country": "Norway", "Year": 2015, "Sector": "nonrenewable", "Electricity Production": 278.9},
-        {"Country": "Norway", "Year": 2016, "Sector": "renewable", "Electricity Production": 15994.2},
-        {"Country": "Norway", "Year": 2016, "Sector": "nonrenewable", "Electricity Production": 297.7},
-        {"Country": "Norway", "Year": 2017, "Sector": "renewable", "Electricity Production": 14996.3},
-        {"Country": "Norway", "Year": 2017, "Sector": "nonrenewable", "Electricity Production": 281.5},
-        {"Country": "Norway", "Year": 2018, "Sector": "renewable", "Electricity Production": 15308.9},
-        {"Country": "Norway", "Year": 2018, "Sector": "nonrenewable", "Electricity Production": 278.7},
-        {"Country": "Norway", "Year": 2019, "Sector": "renewable", "Electricity Production": 14405.1},
-        {"Country": "Norway", "Year": 2019, "Sector": "nonrenewable", "Electricity Production": 249.6},
-        {"Country": "Norway", "Year": 2020, "Sector": "renewable", "Electricity Production": 13061.9},
-        {"Country": "Norway", "Year": 2020, "Sector": "nonrenewable", "Electricity Production": 264.2},
-        {"Country": "Norway", "Year": 2021, "Sector": "renewable", "Electricity Production": 17338.6},
-        {"Country": "Norway", "Year": 2021, "Sector": "nonrenewable", "Electricity Production": 115.8},
-        {"Country": "Norway", "Year": 2022, "Sector": "renewable", "Electricity Production": 14946.1},
-        {"Country": "Norway", "Year": 2022, "Sector": "nonrenewable", "Electricity Production": 140.6},
-        {"Country": "Norway", "Year": 2023, "Sector": "renewable", "Electricity Production": 13931.4},
-        {"Country": "Norway", "Year": 2023, "Sector": "nonrenewable", "Electricity Production": 204.4},
-        {"Country": "Norway", "Year": 2024, "Sector": "renewable", "Electricity Production": 15433.0},
-        {"Country": "Norway", "Year": 2024, "Sector": "nonrenewable", "Electricity Production": 188.0},
-        {"Country": "Sweden", "Year": 2014, "Sector": "renewable", "Electricity Production": 9162.2},
-        {"Country": "Sweden", "Year": 2014, "Sector": "nonrenewable", "Electricity Production": 6821.5},
-        {"Country": "Sweden", "Year": 2015, "Sector": "renewable", "Electricity Production": 8992.2},
-        {"Country": "Sweden", "Year": 2015, "Sector": "nonrenewable", "Electricity Production": 6056.3},
-        {"Country": "Sweden", "Year": 2016, "Sector": "renewable", "Electricity Production": 9936.8},
-        {"Country": "Sweden", "Year": 2016, "Sector": "nonrenewable", "Electricity Production": 6702.2},
-        {"Country": "Sweden", "Year": 2017, "Sector": "renewable", "Electricity Production": 9182.7},
-        {"Country": "Sweden", "Year": 2017, "Sector": "nonrenewable", "Electricity Production": 7130.9},
-        {"Country": "Sweden", "Year": 2018, "Sector": "renewable", "Electricity Production": 9626.5},
-        {"Country": "Sweden", "Year": 2018, "Sector": "nonrenewable", "Electricity Production": 6663.3},
-        {"Country": "Sweden", "Year": 2019, "Sector": "renewable", "Electricity Production": 9772.0},
-        {"Country": "Sweden", "Year": 2019, "Sector": "nonrenewable", "Electricity Production": 6672.5},
-        {"Country": "Sweden", "Year": 2020, "Sector": "renewable", "Electricity Production": 10793.8},
-        {"Country": "Sweden", "Year": 2020, "Sector": "nonrenewable", "Electricity Production": 6011.4},
-        {"Country": "Sweden", "Year": 2021, "Sector": "renewable", "Electricity Production": 11138.5},
-        {"Country": "Sweden", "Year": 2021, "Sector": "nonrenewable", "Electricity Production": 5347.2},
-        {"Country": "Sweden", "Year": 2022, "Sector": "renewable", "Electricity Production": 11909.5},
-        {"Country": "Sweden", "Year": 2022, "Sector": "nonrenewable", "Electricity Production": 5257.0},
-        {"Country": "Sweden", "Year": 2023, "Sector": "renewable", "Electricity Production": 11382.1},
-        {"Country": "Sweden", "Year": 2023, "Sector": "nonrenewable", "Electricity Production": 4562.7},
-        {"Country": "Sweden", "Year": 2024, "Sector": "renewable", "Electricity Production": 12350.3},
-        {"Country": "Sweden", "Year": 2024, "Sector": "nonrenewable", "Electricity Production": 4942.1},
-        {"Country": "Denmark", "Year": 2014, "Sector": "renewable", "Electricity Production": 2521.9},
-        {"Country": "Denmark", "Year": 2014, "Sector": "nonrenewable", "Electricity Production": 1609.4},
-        {"Country": "Denmark", "Year": 2015, "Sector": "renewable", "Electricity Production": 2062.2},
-        {"Country": "Denmark", "Year": 2015, "Sector": "nonrenewable", "Electricity Production": 1405.1},
-        {"Country": "Denmark", "Year": 2016, "Sector": "renewable", "Electricity Production": 2034.4},
-        {"Country": "Denmark", "Year": 2016, "Sector": "nonrenewable", "Electricity Production": 1413.2},
-        {"Country": "Denmark", "Year": 2017, "Sector": "renewable", "Electricity Production": 1844.2},
-        {"Country": "Denmark", "Year": 2017, "Sector": "nonrenewable", "Electricity Production": 1241.5},
-        {"Country": "Denmark", "Year": 2018, "Sector": "renewable", "Electricity Production": 2142.6},
-        {"Country": "Denmark", "Year": 2018, "Sector": "nonrenewable", "Electricity Production": 1029.4},
-        {"Country": "Denmark", "Year": 2019, "Sector": "renewable", "Electricity Production": 2297.2},
-        {"Country": "Denmark", "Year": 2019, "Sector": "nonrenewable", "Electricity Production": 1123.1},
-        {"Country": "Denmark", "Year": 2020, "Sector": "renewable", "Electricity Production": 2954.4},
-        {"Country": "Denmark", "Year": 2020, "Sector": "nonrenewable", "Electricity Production": 711.3},
-        {"Country": "Denmark", "Year": 2021, "Sector": "renewable", "Electricity Production": 2206.6},
-        {"Country": "Denmark", "Year": 2021, "Sector": "nonrenewable", "Electricity Production": 993.5},
-        {"Country": "Denmark", "Year": 2022, "Sector": "renewable", "Electricity Production": 3185.9},
-        {"Country": "Denmark", "Year": 2022, "Sector": "nonrenewable", "Electricity Production": 753.2},
-        {"Country": "Denmark", "Year": 2023, "Sector": "renewable", "Electricity Production": 3061.3},
-        {"Country": "Denmark", "Year": 2023, "Sector": "nonrenewable", "Electricity Production": 528.1},
-        {"Country": "Denmark", "Year": 2024, "Sector": "renewable", "Electricity Production": 3261.3},
-        {"Country": "Denmark", "Year": 2024, "Sector": "nonrenewable", "Electricity Production": 682.3},
-        {"Country": "Iceland", "Year": 2014, "Sector": "renewable", "Electricity Production": 1560.6},
-        {"Country": "Iceland", "Year": 2014, "Sector": "nonrenewable", "Electricity Production": 0.2},
-        {"Country": "Iceland", "Year": 2015, "Sector": "renewable", "Electricity Production": 1628.2},
-        {"Country": "Iceland", "Year": 2015, "Sector": "nonrenewable", "Electricity Production": 0.2},
-        {"Country": "Iceland", "Year": 2016, "Sector": "renewable", "Electricity Production": 1603.5},
-        {"Country": "Iceland", "Year": 2016, "Sector": "nonrenewable", "Electricity Production": 0.1},
-        {"Country": "Iceland", "Year": 2017, "Sector": "renewable", "Electricity Production": 1603.0},
-        {"Country": "Iceland", "Year": 2017, "Sector": "nonrenewable", "Electricity Production": 0.1},
-        {"Country": "Iceland", "Year": 2018, "Sector": "renewable", "Electricity Production": 1673.3},
-        {"Country": "Iceland", "Year": 2018, "Sector": "nonrenewable", "Electricity Production": 0.0},
-        {"Country": "Iceland", "Year": 2019, "Sector": "renewable", "Electricity Production": 1698.8},
-        {"Country": "Iceland", "Year": 2019, "Sector": "nonrenewable", "Electricity Production": 0.1},
-        {"Country": "Iceland", "Year": 2020, "Sector": "renewable", "Electricity Production": 1666.6},
-        {"Country": "Iceland", "Year": 2020, "Sector": "nonrenewable", "Electricity Production": 0.7},
-        {"Country": "Iceland", "Year": 2021, "Sector": "renewable", "Electricity Production": 1627.0},
-        {"Country": "Iceland", "Year": 2021, "Sector": "nonrenewable", "Electricity Production": 0.2},
-        {"Country": "Iceland", "Year": 2022, "Sector": "renewable", "Electricity Production": 1712.6},
-        {"Country": "Iceland", "Year": 2022, "Sector": "nonrenewable", "Electricity Production": 0.3},
-        {"Country": "Iceland", "Year": 2023, "Sector": "renewable", "Electricity Production": 1742.3},
-        {"Country": "Iceland", "Year": 2023, "Sector": "nonrenewable", "Electricity Production": 0.2},
-        {"Country": "Iceland", "Year": 2024, "Sector": "renewable", "Electricity Production": 1644.6},
-        {"Country": "Iceland", "Year": 2024, "Sector": "nonrenewable", "Electricity Production": 0.2},
-        {"Country": "Finland", "Year": 2014, "Sector": "renewable", "Electricity Production": 2795.9},
-        {"Country": "Finland", "Year": 2014, "Sector": "nonrenewable", "Electricity Production": 4467.3},
-        {"Country": "Finland", "Year": 2015, "Sector": "renewable", "Electricity Production": 2452.8},
-        {"Country": "Finland", "Year": 2015, "Sector": "nonrenewable", "Electricity Production": 4030.5},
-        {"Country": "Finland", "Year": 2016, "Sector": "renewable", "Electricity Production": 2858.1},
-        {"Country": "Finland", "Year": 2016, "Sector": "nonrenewable", "Electricity Production": 4268.9},
-        {"Country": "Finland", "Year": 2017, "Sector": "renewable", "Electricity Production": 2799.4},
-        {"Country": "Finland", "Year": 2017, "Sector": "nonrenewable", "Electricity Production": 3787.5},
-        {"Country": "Finland", "Year": 2018, "Sector": "renewable", "Electricity Production": 3129.8},
-        {"Country": "Finland", "Year": 2018, "Sector": "nonrenewable", "Electricity Production": 3764.2},
-        {"Country": "Finland", "Year": 2019, "Sector": "renewable", "Electricity Production": 2864.5},
-        {"Country": "Finland", "Year": 2019, "Sector": "nonrenewable", "Electricity Production": 4071.2},
-        {"Country": "Finland", "Year": 2020, "Sector": "renewable", "Electricity Production": 3423.0},
-        {"Country": "Finland", "Year": 2020, "Sector": "nonrenewable", "Electricity Production": 3245.5},
-        {"Country": "Finland", "Year": 2021, "Sector": "renewable", "Electricity Production": 3298.3},
-        {"Country": "Finland", "Year": 2021, "Sector": "nonrenewable", "Electricity Production": 3658.9},
-        {"Country": "Finland", "Year": 2022, "Sector": "renewable", "Electricity Production": 3627.9},
-        {"Country": "Finland", "Year": 2022, "Sector": "nonrenewable", "Electricity Production": 3068.7},
-        {"Country": "Finland", "Year": 2023, "Sector": "renewable", "Electricity Production": 4303.0},
-        {"Country": "Finland", "Year": 2023, "Sector": "nonrenewable", "Electricity Production": 3078.1},
-        {"Country": "Finland", "Year": 2024, "Sector": "renewable", "Electricity Production": 4565.4},
-        {"Country": "Finland", "Year": 2024, "Sector": "nonrenewable", "Electricity Production": 3999.7}
-      ]
+    }
+  ],
+  "data": {
+    "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/electricity_renewable_data_january.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.YEAR == selectedYear"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "tooltip": true
+  },
+  "encoding": {
+    "x": {
+      "field": "COUNTRY",
+      "type": "nominal",
+      "axis": {
+        "title": "Country",
+        "labelAngle": 0
+      }
     },
-    "transform": [
-      {"filter": "datum.Year == selectedYear"}
-    ],
-    "mark": {
-      "type": "bar",
-      "tooltip": true
+    "xOffset": {
+      "field": "PRODUCT",
+      "type": "nominal"
     },
-    "encoding": {
-      "x": {
-        "field": "Country",
-        "type": "nominal",
-        "axis": {"title": "Country", "labelAngle": 0}
-      },
-      "xOffset": {
-        "field": "Sector",
-        "type": "nominal"
-      },
-      "y": {
-        "field": "Electricity Production",
-        "type": "quantitative",
-        "axis": {"title": "Electricity Production (GWh)"}
-      },
-       "color": {
-        "field": "Sector",
-        "type": "nominal",
-        "scale": {
-          "domain": ["renewable", "nonrenewable"],
-          "range": ["#d9d8d0", "#013220"]  
-        },
-        "legend": {"title": "Sector"}
-      },
-      "tooltip": [
-        {"field": "Country", "title": "Country"},
-        {"field": "Sector", "title": "Sector"},
-        {"field": "Electricity Production", "title": "Production (GWh)"}
-      ]
+    "y": {
+      "field": "VALUE",
+      "type": "quantitative",
+      "axis": {
+        "title": "Electricity Production (GWh)"
+      }
     },
-    "config": {
-      "view": {"stroke": "transparent"},
-      "axis": {"grid": false},
-      "bar": {"width": 20}
+    "color": {
+      "field": "PRODUCT",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Renewables", "Non-renewables"],
+        "range": ["#d9d8d0", "#013220"]
+      },
+      "legend": {
+        "title": "Sector"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "COUNTRY",
+        "title": "Country"
+      },
+      {
+        "field": "PRODUCT",
+        "title": "Product"
+      },
+      {
+        "field": "VALUE",
+        "title": "Production (GWh)"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    },
+    "axis": {
+      "grid": false
+    },
+    "bar": {
+      "width": 65
     }
   }
+}
