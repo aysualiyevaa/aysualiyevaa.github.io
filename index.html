@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
     <style>
-     
         body {
             display: flex;
             flex-direction: column;
@@ -18,7 +17,6 @@
             overflow: hidden;
         }
 
-      
         h1 {
             font-size: 6rem;
             margin-bottom: 10px;
@@ -28,7 +26,6 @@
             animation: fadeInUp 2s forwards;
         }
 
-        
         p.subtitle {
             font-size: 1.5rem;
             color: #4d6594;
@@ -38,7 +35,6 @@
             animation: fadeInUpSubtitle 2s forwards;
         }
 
-       
         @keyframes fadeInUp {
             0% {
                 opacity: 0;
@@ -50,7 +46,6 @@
             }
         }
 
- 
         @keyframes fadeInUpSubtitle {
             0% {
                 opacity: 0;
@@ -62,19 +57,17 @@
             }
         }
 
-       
         .links {
             margin-top: 40px;
         }
 
-       
         .links a {
             font-size: 1.5rem;
             padding: 10px 20px;
             margin: 10px;
             text-decoration: none;
-            background-color: #4d6594; 
-            color: white; 
+            background-color: #4d6594;
+            color: white;
             border-radius: 5px;
             display: inline-block;
             opacity: 0;
@@ -83,14 +76,12 @@
             transition: transform 0.3s ease-in-out, background-color 0.3s ease;
         }
 
-     
         .links a:hover {
-            background-color: #3e5378; 
+            background-color: #3e5378;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             transform: scale(1.05);
         }
 
- 
         @keyframes fadeInUpLinks {
             0% {
                 opacity: 0;
@@ -102,12 +93,10 @@
             }
         }
 
-  
         .clicked {
             animation: bounce 0.5s ease-out forwards;
         }
 
-     
         @keyframes bounce {
             0% {
                 transform: scale(1);
@@ -123,24 +112,34 @@
             }
         }
 
-      
         footer {
             position: absolute;
             bottom: 20px;
             font-size: 0.8rem;
             color: #555;
         }
+
+        @keyframes fadeOutScale {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1.5);
+            }
+        }
     </style>
 </head>
 <body>
 
-
     <h1>Aysu Aliyeva</h1>
-
-
     <p class="subtitle">LSE | Master in Public Administration (MPA)</p>
 
-   
     <div class="links">
         <a href="portfolio.html" class="link">Portfolio</a> 
         <a href="project.html" class="link">Project</a> 
@@ -148,26 +147,24 @@
         <a href="https://github.com/aysualiyevaa">GitHub</a>
     </div>
 
-
     <footer>
         <p>© 2024 Aysu Aliyeva. All rights reserved.</p>
     </footer>
 
     <script>
-     
         const links = document.querySelectorAll('.link');
-        
+
         links.forEach(link => {
             link.addEventListener('click', function(e) {
-               
-                e.preventDefault();
+                e.preventDefault(); 
 
-                
+               
                 this.classList.add('clicked');
 
-                
+                this.style.animation = 'fadeOutScale 1s forwards'; 
+
                 setTimeout(() => {
-                    window.location.href = this.href;
+                    window.location.href = this.href; 
                 }, 1000); 
             });
         });
