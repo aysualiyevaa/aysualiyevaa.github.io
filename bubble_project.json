@@ -19,10 +19,11 @@
       "Bubble size based on Population.",
       "Source: WorldBank, International Renewable Energy Agency, International Energy Agency"
     ],
-    "subtitleFontStyle": "italic",
-    "subtitleFontSize": 12,
+    "fontSize": 16,
     "anchor": "middle",
-    "fontSize": 16
+    "subtitleFontSize": 12,
+    "subtitleFontWeight": "normal",
+    "subtitleFontStyle": "italic"
   },
   "mark": {"type": "circle", "opacity": 0.8},
   "height": 500,

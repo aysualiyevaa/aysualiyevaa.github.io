@@ -8,12 +8,11 @@
       "Country (x), Electricity Production (GWh) (y).",
       "Source: International Energy Agency"
     ],
-    "subtitleFontStyle": "italic",
-    "subtitleFontSize": 10,
     "fontSize": 16,
     "anchor": "middle",
-    "align": "center",
-    "font": "Arial"
+    "subtitleFontSize": 12,
+    "subtitleFontWeight": "normal",
+    "subtitleFontStyle": "italic"
   },
   "width": 800,
   "height": 400,
