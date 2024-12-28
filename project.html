@@ -14,90 +14,128 @@
             flex-direction: column;
             align-items: center;
             margin: 0;
-            background-color: #d9d8d0;  
+            background-color: #d9d8d0;
+            font-family: Arial, sans-serif;
         }
 
-       
+    
         header {
+            background-color: #ffffff; 
+            color: #013220; 
+            padding: 20px;
             text-align: center;
-            margin-bottom: 30px; 
+            font-size: 1.2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
         }
+
+        header nav {
+            margin-top: 10px;
+        }
+
+        header nav a {
+            color: #013220; 
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        
+        .content {
+    max-width: 1200px; 
+    margin-top: 80px; 
+    padding: 20px;
+}
 
 
         section {
-            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #013220;
             margin-bottom: 20px;
         }
 
-    
+        p {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
         .chart-description {
+            margin-top: 30px;
             text-align: center;
-            margin-bottom: 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
 
-        #Location1, #Location2 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 80%;  
-            background-color: #d9d8d0;  
+        .chart-description.visible {
+            opacity: 1;
         }
 
-   
         figure {
-            background-color: #d9d8d0;  
-            padding: 10px;
-            border-radius: 8px;  
+            padding: 0; 
+            margin: 20px auto;
+            width: 100%; 
+            background: none; 
+            border: none; 
         }
+
     </style>
 </head>
 <body>
+
     <header>
         <nav>
-            <a href="index.html">Portfolio</a>
+            <a href="portfolio.html">Portfolio</a>
             <a href="https://github.com/aysualiyevaa">Github</a>
         </nav>
         <h1>
-            Aysu Aliyeva<br>
-            PP434- Automated Data Visualisation for Policymaking<br>
-            Candidate number: 48943
+            PP434 Project<br>
+            Analysis of Renewable Energy Patterns in 4 Nordic Countries
         </h1>
     </header>
-    
-  
-    <section>
-        <h1>Aims</h1>
-        <p>Maintaining sustainable development has been one of the crucial challenges that each country in the world deals with. One of the widely taken approaches is to focus on the promotion of energy systems with less environmental damage through the adoption of renewable energy policies. Global leaders in the implementation of renewable energy strategies are considered to be Nordic countries, which are relevant to explore the path to achieve sustainable energy. For this reason, the main aim of this project is based on analysing the relevant renewable energy strategies taken by 4 Nordic countries, which are Denmark, Finland, Norway, and Sweden. The essential purpose is to compare and analyse how adopted renewable energy policies in recent years have affected the energy consumption patterns, employment of population in this sector, trend for greenhouse gas emissions, and whether the GDP rate affects the research and development spending on renewable energy sector. The project also aims to compare how the four countries target the patterns for various sectors of renewable energy, such as solar, wind, hydropower, etc., and reflect on whether the evolution of renewable and non-renewable energy electricity production differs substantially among the four countries. </p>
-    </section>
-    
-    <section>
-        <h1>The Data and Challenges</h1>
-        <p>The majority of the utilized data was taken from the International Energy Agency (IEA) and WorldBank. Data and statistics were from the free data sets based on various energy systems available to download on the official website of IEA. Most of the data is updated on monthly and annual basis, focused on various aspects of energy policies adopted by countries, and provided data either through excel direct downloads, table generation, or illustrated charts, which allows to get sufficient information. Majority of the data was subtracted by looping and merging data to get it in combined dataset as “csv” file via Google Colab with the help of the extracted API links through “Inspect” function; I used the relevant URL codes of each country on Google Colab, which allowed me to loop through the API. While some of the “csv" files were uploaded to Github through which raw link was taken to generate charts via Vega Lite, some of the charts were generated in Google Colab itself after looping. One of the problems with IEA website was that the data was only provided on number of female managers in energy sector, which limits to focus specifically on renewable energy sector. Furthermore, some data on IEA was available on monthly basis; as I aimed to analyse on annual basis, to avoid confusion on the chart generation, I scraped the data only for January. 
-            International Renewable Energy Agency (IRENA) was also taken as a source for data extraction, which is an intergovernmental organization publishing statistics on renewable energy capacities of countries. Data for renewable energy employment was subtracted from IRENA dataset; however, the only available data was for 2023 year, and obtaining data was possible via either excel downloading or manually extracting data into separate excel sheet. API link only provided data on trend for global renewable energy employment. 
-             </p>
-    </section>
-    
-    <div class="chart-description">
-        <figure id="Location1"></figure> 
-    <div class="chart-description">
-        <figure id="Location2"></figure>
+
+    <div class="content">
+       
+        <section id="aims">
+            <h1>Aims</h1>
+            <p>Maintaining sustainable development has been one of the crucial challenges that each country in the world deals with. One of the widely taken approaches is to focus on the promotion of energy systems with less environmental damage through the adoption of renewable energy policies. Global leaders in the implementation of renewable energy strategies are considered to be Nordic countries, which are relevant to explore the path to achieve sustainable energy. For this reason, the main aim of this project is based on analysing the relevant renewable energy strategies taken by 4 Nordic countries, which are Denmark, Finland, Norway, and Sweden. The essential purpose is to compare and analyse how adopted renewable energy policies in recent years have affected the energy consumption patterns, employment of population in this sector, trend for greenhouse gas emissions, and whether the GDP rate affects the research and development spending on renewable energy sector. The project also aims to compare how the four countries target the patterns for various sectors of renewable energy, such as solar, wind, hydropower, etc., and reflect on whether the evolution of renewable and non-renewable energy electricity production differs substantially among the four countries.</p>
+        </section>
+        
+        
+        <section id="data">
+            <h1>The Data and Challenges</h1>
+            <p>The majority of the utilized data was taken from the International Energy Agency (IEA) and WorldBank. Data and statistics were from the free data sets based on various energy systems available to download on the official website of IEA. Most of the data is updated on monthly and annual basis, focused on various aspects of energy policies adopted by countries, and provided data either through excel direct downloads, table generation, or illustrated charts, which allows to get sufficient information. Majority of the data was subtracted by looping and merging data to get it in combined dataset as “csv” file via Google Colab with the help of the extracted API links through “Inspect” function; I used the relevant URL codes of each country on Google Colab, which allowed me to loop through the API. While some of the “csv" files were uploaded to Github through which raw link was taken to generate charts via Vega Lite, some of the charts were generated in Google Colab itself after looping. One of the problems with IEA website was that the data was only provided on number of female managers in energy sector, which limits to focus specifically on renewable energy sector. Furthermore, some data on IEA was available on monthly basis; as I aimed to analyse on annual basis, to avoid confusion on the chart generation, I scraped the data only for January. International Renewable Energy Agency (IRENA) was also taken as a source for data extraction, which is an intergovernmental organization publishing statistics on renewable energy capacities of countries. Data for renewable energy employment was subtracted from IRENA dataset; however, the only available data was for 2023 year, and obtaining data was possible via either excel downloading or manually extracting data into separate excel sheet. API link only provided data on trend for global renewable energy employment.</p>
+        </section>
+
+      
+        <div class="chart-description" id="chart1">
+            <figure id="Location1"></figure>
+        </div>
+        <div class="chart-description" id="chart2">
+            <figure id="Location2"></figure>
+        </div>
+        <div class="chart-description" id="chart3">
+            <figure id="Location3"></figure>
+        </div>
+        <div class="chart-description" id="chart4">
+            <figure id="Location4"></figure>
+        </div>
+        <div class="chart-description" id="chart5">
+            <figure id="Location5"></figure>
+        </div>
+        <div class="chart-description" id="chart6">
+            <figure id="Location6"></figure>
+        </div>
+        <div class="chart-description" id="chart7">
+            <figure id="Location7"></figure>
+        </div>
     </div>
-    <div class="chart-description">
-        <figure id="Location3"></figure>
-    </div>
-    <div class="chart-description">
-        <figure id="Location4"></figure>
-    </div>
-    <div class="chart-description">
-        <figure id="Location5"></figure>
-    </div>
-    <div class="chart-description">
-        <figure id="Location6"></figure>
-    </div>
-    <div class="chart-description">
-        <figure id="Location7"></figure>
-    </div>
+
     <script>
+       
         let figure_1_spec = "energy_consumption.json";
         let figure_2_spec = "renewable_barchart.json";
         let figure_3_spec = "evolution.json";
@@ -105,6 +143,7 @@
         let figure_5_spec = "co2.json";
         let figure_6_spec = "combined_sp_chart.json";
         let figure_7_spec = "merged_sp_chart.json";
+        
         vegaEmbed('#Location1', figure_1_spec);
         vegaEmbed('#Location2', figure_2_spec);
         vegaEmbed('#Location3', figure_3_spec);
@@ -112,6 +151,21 @@
         vegaEmbed('#Location5', figure_5_spec);
         vegaEmbed('#Location6', figure_6_spec);
         vegaEmbed('#Location7', figure_7_spec);
+
+        const charts = document.querySelectorAll('.chart-description');
+        
+        function checkVisibility() {
+            for (let chart of charts) {
+                const rect = chart.getBoundingClientRect();
+                if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                    chart.classList.add('visible');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility(); 
     </script>
+
 </body>
 </html>
