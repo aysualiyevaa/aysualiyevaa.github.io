@@ -2,13 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #d9d8d0; 
+    background-color: #d9d8d0;
     color: #333;
 }
 
 header {
-    width: 100%; 
-    background-color: #013220; 
+    width: 100%;
+    background-color: #013220;
     color: white;
     padding: 20px;
     text-align: center;
@@ -17,49 +17,79 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2em; 
-    line-height: 1.4; 
+    font-size: 2em;
+    line-height: 1.4;
 }
 
 nav {
     display: flex;
-    justify-content: center; 
-    gap: 15px; 
+    justify-content: center;
+    gap: 15px;
     margin-bottom: 20px;
 }
 
 nav a {
-    color: white; 
+    color: white;
     font-size: 1.1em;
     text-decoration: none;
     padding: 8px 15px;
-    border: 2px solid white; 
+    border: 2px solid white;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s; 
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
     background-color: white;
-    color: #013220; 
+    color: #013220;
 }
 
 section {
     margin: 20px auto;
-    padding: 20px;
-    width: 80%;
-    max-width: 800px;
-    background-color: white;
+    padding: 30px;
+    width: 95%;
+    max-width: 1200px;
+    background-color: white; /* Beige background */
+    border: 2px solid #013220; /* Green border */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+section h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 section p {
     margin: 0;
     font-size: 1.2em;
-    line-height: 1.6; 
+    line-height: 1.8;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
+/* Enlarged Square Container for Content */
+
+
+/* Link Button */
+.content-square a {
+    display: inline-block;
+    padding: 12px 18px;
+    background-color: #013220;
+    color: #d9d8d0;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for the link */
+.content-square a:hover {
+    background-color: #025930;
+    transform: scale(1.05);
+}
+
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.5em;
@@ -67,10 +97,16 @@ section p {
 
     nav a {
         font-size: 1em;
-        padding: 8px 10px; 
+        padding: 8px 10px;
     }
 
     section {
-        width: 90%; 
+        width: 90%;
+    }
+
+    .content-square {
+        width: 95%; /* Adjust width for small screens */
+        height: auto; /* Auto height for better fit */
+        padding: 20px;
     }
 }

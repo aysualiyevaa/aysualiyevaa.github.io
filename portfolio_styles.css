@@ -1,67 +1,133 @@
-/* This is an example CSS file. If you include it in your portfolio, it'll provide some clean and basic styling */
-/* for your page. Feel free to experiment with the values, or copy them into a new file and use that instead. */
-
-/* These are comments in CSS. Comments don't do anything except explain your working to make code easier to understand. */
-
-
-body { /* We can style any HTML element by using its name - here we're styling the body */
-  /* We want text that uses a clean sans-serif font, is usually 16px big and close to black */
+/* General body styling */
+body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #333;
+  color: #4d0843; /* All text color set to #4d0843 */
   line-height: 1.6;
-  /* we want a white page, that's centered and not too wide */
-  background-color: #fff;
-  margin:0 auto;
-  max-width: 800px;
+  background-color: #d6bfd3; /* Background color for the page */
+  margin: 0 auto;
+  max-width: 1200px;
   padding-top: 60px;
 }
 
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: #333;
-  margin-top: 24px;
-  margin-bottom: 16px;
-  font-weight: 600;
+/* Header Section */
+.header-container {
+  background-color: white; /* White background for the header */
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px; /* Optional: Rounded corners for the header */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Light shadow around the header */
 }
 
-/* We want the headings to be a little bigger than the paragraph text */
-.big { /* This is the class we created in the HTML file, you can use it to style any element */
-  font-size: 2.5em;
+/* Links container styling */
+.links-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-h2 {
-  font-size: 1.2em;
-}
-
-.small {
-  font-size: 1.25em;
-}
-
-/* Paragraph */
-p {
-  margin-bottom: 1em;
-  font-weight: 300;
-}
-
-section {
-  margin-bottom: 2.5em;  /* We want a little more space between sections */
-}
-
-/* Links */
-/* We want the links to be a little more visible  and a different color */
-a {
-  color: #065f46;
+.links-container a {
   text-decoration: none;
+  color: white;
+  background-color: #4d0843; /* Link background color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
 }
 
-a:hover {
-  text-decoration: underline;
+.links-container a:hover {
+  background-color: #3b0632; /* Darker shade for hover effect */
 }
-  
-/* Images */
+
+/* Portfolio Title styling */
+h1 {
+  font-size: 3em;
+  color: #4d0843; /* Portfolio title color */
+  text-align: center; /* Center the portfolio title */
+  margin-top: 0;
+}
+
+/* Main Content Section */
+.main-content {
+  background-color: white; /* White background for the main content */
+  padding: 20px;
+  border-radius: 8px; /* Optional: Rounded corners for the main content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Light shadow around the main content */
+}
+
+/* Section styling */
+section {
+  margin-bottom: 2.5em;  /* Space between sections */
+}
+
+/* Styling for each section with a chart */
+.content-square {
+  background-color: white;  /* White background for each chart section */
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Light shadow for sections */
+  text-align: center; /* Center the content inside each section */
+}
+
+/* Content square styling for each chart container */
+.content-square h2 {
+  font-size: 1.5em;
+  color: #4d0843; /* Graph title color */
+  margin-bottom: 15px;
+}
+
+.content-square p {
+  color: #4d0843; /* Ensure paragraph text is the same color */
+}
+
+/* Graph container */
+.graph {
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+  background-color: #f0f0f0; /* Placeholder background color */
+  margin: 0 auto;
+  border-radius: 8px; /* Optional: Rounded corners for the graphs */
+}
+
+/* Optional: Add hover effect to sections */
+.content-square:hover {
+  background-color: #e3e3e3;
+}
+
+/* Optional: Style for the images or charts */
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .links-container {
+    flex-direction: column; /* Stack links on smaller screens */
+    align-items: center;
+  }
+
+  .content-square {
+    height: auto; /* Allow content to adjust height on smaller screens */
+  }
+}
+.link-square {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: #4d0843; /* Square background color */
+  padding: 20px;
+  border-radius: 8px; /* Optional: Rounded corners */
+  text-align: center;
+  width: 200px;  /* Fixed width to make it a square */
+  height: 200px; /* Fixed height to make it a square */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.link-square:hover {
+  background-color: #3b0632; /* Darker shade for hover effect */
 }

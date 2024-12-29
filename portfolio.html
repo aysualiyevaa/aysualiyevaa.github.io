@@ -1,63 +1,31 @@
-<!-- This HTML file provides a simple example of a portfolio page. It contains a header, a few sections, and a few charts. -->
-<!-- It works with the three css files in this folder: example1.css, example2.css and example3.css. -->
-<!-- The HTML file defines the structure of the page, and the CSS files define how it looks. -->
-<!-- The CSS examples are all designed to work with this page. Try swapping them out on line 29 and see what happens. -->
-
-<!-- Take a look around and make your own copy to adapt for your own use. -->
-
-<!-- This is a comment -->
-<!-- Comments are not displayed in the browser -->
-<!-- They can be used to leave notes in the code -->
-
 <!DOCTYPE html>
-<html> 
-    <!-- HTML is heirarchial: tags like this define elements on the page. 
-    Each tag does something different. For example:
-        - The <html> tag defines the whole document.
-        - The <h1> tag defines a large heading
-        - The <p> tag defines a paragraph
-        - Tags appear as an opening <div> and closing </div> pair
-    -->
-
-<head>    
-    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
-
-    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
-    <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aysu's Portfolio Page</title>
     <link rel="stylesheet" type="text/css" href="portfolio_styles.css">
-    <title>Aysu's Portfolio Page</title> <!-- The title displayed in the browser tab, not on the page itself -->
-
-    <!-- This is a link to the vega-lite which we're using to make graphs -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-
-    <style>
-        #chartGrid {
-            display: flex;
-        }
-        
-    </style>
-    
 </head>
+<body>
 
+    <!-- Links displayed in boxes above the portfolio title -->
+    <div class="header-container">
+    <div class="links-container">
+        <a href="https://www.linkedin.com/in/aysu-aliyeva-473710222/">LinkedIn</a>
+        <a href="https://github.com/aysualiyevaa">GitHub</a>
+        <a href="https://aysualiyevaa.github.io/project">Project</a>
+    </div>
 
-<body> 
-<!-- The body tag contains the elements that visitors to our page will see. -->
-    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
-        <!-- This is a header, it is the largest text on the page -->
-        Aysu Aliyeva
+    <!-- The main portfolio title -->
+    <h1>Portfolio</h1>
 
-    </h1>
-    <p style="margin-top: 0px; color: darkblue">
-        <!-- we're setting the margin to 0px so the header and authour name are close together -->
-        Aysu Aliyeva | <a href="https://www.linkedin.com/in/aysu-aliyeva-473710222/ ">LinkedIn</a> | <a
-            href="https://github.com/aysualiyevaa">GitHub</a> | <a
-            href="https://aysualiyevaa.github.io/project">Project</a>
-    </p>
-    <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
-      Welcome to my website!
+    <!-- Add your other content here -->
 
+</body>
+<main class="main-content"></main>
     <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
     <section>
 
@@ -217,6 +185,7 @@
         </p>
          <figure id= "Location27"></figure> 
      <p>
+    </main>
 </section>
         <script>
             // This is a comment in JavaScript - it's a different language to HTML and CSS
