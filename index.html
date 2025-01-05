@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>Aysu Aliyeva</title>
     <style>
         body {
             display: flex;
@@ -57,12 +57,25 @@
             }
         }
 
+        .welcome-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            color: #4d6594;
+            text-align: center;
+            max-width: 800px;
+            margin-top: 20px;
+            line-height: 1.6;
+            font-size: 1.2rem;
+        }
+
         .links {
-            margin-top: 40px;
+            margin-top: 20px;
         }
 
         .links a {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             padding: 10px 20px;
             margin: 10px;
             text-decoration: none;
@@ -70,9 +83,8 @@
             color: white;
             border-radius: 5px;
             display: inline-block;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUpLinks 1.5s forwards;
+            opacity: 1;
+            transform: translateY(0);
             transition: transform 0.3s ease-in-out, background-color 0.3s ease;
         }
 
@@ -82,36 +94,6 @@
             transform: scale(1.05);
         }
 
-        @keyframes fadeInUpLinks {
-            0% {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .clicked {
-            animation: bounce 0.5s ease-out forwards;
-        }
-
-        @keyframes bounce {
-            0% {
-                transform: scale(1);
-            }
-            30% {
-                transform: scale(1.2);
-            }
-            50% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
         footer {
             position: absolute;
             bottom: 20px;
@@ -119,56 +101,31 @@
             color: #555;
         }
 
-        @keyframes fadeOutScale {
-            0% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 0.5;
-                transform: scale(1.2);
-            }
-            100% {
-                opacity: 0;
-                transform: scale(1.5);
-            }
-        }
     </style>
 </head>
 <body>
 
     <h1>Aysu Aliyeva</h1>
     <p class="subtitle">LSE | Master in Public Administration (MPA)</p>
-
-    <div class="links">
-        <a href="portfolio.html" class="link">Portfolio</a> 
-        <a href="project.html" class="link">Project</a> 
-        <a href="https://www.linkedin.com/in/aysu-aliyeva-473710222/">LinkedIn</a>
-        <a href="https://github.com/aysualiyevaa">GitHub</a>
+    <p class="subtitle">PP434: Automated Data Visualisation for Policymaking</p>
+    
+    <div class="welcome-box">
+        <p>Welcome to my page! I am Aysu Aliyeva, a second-year MPA student at LSE. This website demonstrates the project and portfolio tasks required for the PP434 course. You can explore them in more detail by clicking the links below.</p>
+        <div class="links">
+            <a href="portfolio.html" class="link">Portfolio</a> 
+            <a href="project.html" class="link">Project</a> 
+            <a href="https://www.linkedin.com/in/aysu-aliyeva-473710222/" class="link">LinkedIn</a>
+            <a href="https://github.com/aysualiyevaa" class="link">GitHub</a>
+        </div>
     </div>
 
+
+
     <footer>
-        <p>© 2024 Aysu Aliyeva. All rights reserved.</p>
+        <p>© 2025 Aysu Aliyeva. All rights reserved. 
+            <a href="mailto:a.aliyeva3@lse.ac.uk" style="text-decoration: underline; color: #4d6594;">Contact</a>
+        </p>
     </footer>
-
-    <script>
-        const links = document.querySelectorAll('.link');
-
-        links.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault(); 
-
-               
-                this.classList.add('clicked');
-
-                this.style.animation = 'fadeOutScale 1s forwards'; 
-
-                setTimeout(() => {
-                    window.location.href = this.href; 
-                }, 1000); 
-            });
-        });
-    </script>
-
+    
 </body>
 </html>
