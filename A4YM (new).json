@@ -1,22 +1,25 @@
-{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"data": {
-  "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/A4YM.json",
-  "format":{"property": "years"}
-},
- "width": 300,
-  "height": 250,
-"title": {
-
-  "text": "Output per Worker: Whole Economy SA: Index 2022=100: UK",
-  "subtitle": ["Index, base year= 100"], 
-   "subtitlePadding": 12,
-   "anchor": "start"
-},
-"mark": {"type": "line"},
-"encoding": {
-  "x": {"field":"date", "type": "temporal", "title":""},
-  "y": {"field":"value", "type": "quantitative", "title":""}
-}
-
-
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/A4YM.json",
+    "format": {"property": "years"}
+  },
+  "width": 250,
+  "height": 150,
+  "title": {
+    "text": "Output per Worker: Whole Economy SA: Index 2022=100: UK",
+    "subtitle": ["Index, base year= 100"],
+    "subtitlePadding": 12,
+    "anchor": "middle",
+    "align": "center"
+  },
+  "mark": {"type": "line"},
+  "encoding": {
+    "x": {"field": "date", "type": "temporal", "title": ""},
+    "y": {"field": "value", "type": "quantitative", "title": ""}
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "title": {"anchor": "middle"}
+  }
 }

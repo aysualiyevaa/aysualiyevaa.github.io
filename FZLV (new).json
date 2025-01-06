@@ -4,8 +4,8 @@
       "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/FZLV.json",
     "format": {"property": "quarters"}
     },
-    "width": 350,
-    "height": 250,
+    "width": 250,
+    "height": 150,
     "title": {
       "text": "Average labour compensation per hour worked: Whole economy: % change quarter on previous quarter SA: UK",
       "anchor": "start"

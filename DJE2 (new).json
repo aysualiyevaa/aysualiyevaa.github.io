@@ -1,15 +1,16 @@
-{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"data": {
-  "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/DJE2.json",
-  "format":{"property": "years"}
-},
- "width": 350,
-  "height": 250,
-"title": {
-
-  "text": "Output per job: Construction F SIC07, % change on Y, SA, UK",
-   "anchor": "start"
-},
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/DJE2.json",
+    "format": {"property": "years"}
+  },
+  "width": 250,
+  "height": 150,
+  "title": {
+    "text": "Output per job: Construction F SIC07, % change on Y, SA, UK",
+    "anchor": "middle",
+    "align": "center"
+  },
   "transform": [
     {"calculate": "datum.value / 100", "as": "scaled_value"} 
   ],
@@ -28,5 +29,9 @@
         "format": ".1%"  
       }
     }
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "title": {"anchor": "middle"}
   }
 }

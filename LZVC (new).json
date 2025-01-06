@@ -1,17 +1,18 @@
-{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"data": {
-  "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/LZVC.json",
-  "format":{"property": "years"}
-},
- "width": 350,
-  "height": 250,
-"title": {
-
-  "text": "UK Whole Economy: Productivity hours % change per annum SA",
-   "anchor": "start"
-   },
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/aysualiyevaa/aysualiyevaa.github.io/refs/heads/main/LZVC.json",
+    "format": {"property": "years"}
+  },
+  "width": 250,
+  "height": 150,
+  "title": {
+    "text": "UK Whole Economy: Productivity hours % change per annum SA",
+    "anchor": "middle",
+    "align": "center"
+  },
   "transform": [
-    {"calculate": "datum.value / 100", "as": "scaled_value"} 
+    {"calculate": "datum.value / 100", "as": "scaled_value"}
   ],
   "mark": {"type": "line"},
   "encoding": {
@@ -25,8 +26,12 @@
         "ticks": false,
         "domain": false,
         "labelPadding": 5,
-        "format": ".1%"  
+        "format": ".1%"
       }
     }
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "title": {"anchor": "middle"}
   }
 }
