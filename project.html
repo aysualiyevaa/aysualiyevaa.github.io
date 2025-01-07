@@ -50,12 +50,11 @@
         section {
             margin-bottom: 40px;
         }
-
-        h1 {
-            font-size: 2rem;
-            color: #013220;
-            margin-bottom: 20px;
-        }
+        header h1 {
+    font-size: 1.8rem !important; 
+    color: #013220;
+    margin-bottom: 20px;
+}
 
         p {
             font-size: 1rem;
@@ -88,12 +87,14 @@
 
     <header>
         <nav>
+            <a href="index.html">Home</a>
             <a href="portfolio.html">Portfolio</a>
+            <a href="https://www.linkedin.com/in/aysu-aliyeva-473710222/">LinkedIn</a>
             <a href="https://github.com/aysualiyevaa">Github</a>
         </nav>
         <h1>
-            PP434 Project<br>
-            Analysis of Renewable Energy Patterns and Their Impacts in 4 Nordic Countries
+            Project by Aysu Aliyeva<br>
+           Renewable Energy Development in 4 Nordic Countries
         </h1>
     </header>
 
@@ -101,25 +102,23 @@
        
         <section id="aims">
             <h1>Aims</h1>
-            <p>Maintaining sustainable development has been one of the crucial challenges that each country in the world deals with. One of the widely taken approaches is to focus on the promotion of energy systems with less environmental damage through the adoption of renewable energy policies. Global leaders in the implementation of renewable energy strategies are considered to be Nordic countries, which are relevant to explore the path to achieve sustainable energy. For this reason, the main aim of this project is based on analysing the relevant renewable energy strategies taken by 4 Nordic countries, which are Denmark, Finland, Norway, and Sweden. The essential purpose is to compare and analyse how adopted renewable energy policies in recent years have affected the energy consumption patterns, employment of population in this sector, trend for greenhouse gas emissions, and whether the GDP rate affects the research and development spending on renewable energy sector. The project also aims to compare how the four countries target the patterns for various sectors of renewable energy, such as solar, wind, hydropower, etc., and reflect on whether the evolution of renewable and non-renewable energy electricity production differs substantially among the four countries.</p>
+            <p>Global leaders in the implementation of renewable energy strategies are considered to be Nordic countries, which are relevant to explore the path to achieve sustainable energy. The main aim of this project is based on analysing the relevant renewable energy strategies taken by 4 Nordic countries, which are Denmark, Finland, Norway, and Sweden. The essential purpose is to compare and analyse how the four countries target the patterns for various sectors of renewable energy, how adopted renewable energy policies in recent years have affected the energy consumption patterns, employment of population in this sector, trend for greenhouse gas emissions, and whether the GDP rate affects the research and development spending on renewable energy sector. </p>
         </section>
         
         
-        <section id="data">
-            <h1>The Data and Challenges</h1>
-            <p> The majority of the utilized data was taken from the International Energy Agency (IEA) and WorldBank. Most of the data is updated on monthly and annual basis, focused on various aspects of energy policies adopted by countries, and provided data either through excel direct downloads, table generation, or illustrated charts. Majority of the data was scraped and merged to get it in combined dataset as “csv” file via Google Colab with the help of the extracted API links through “Inspect” function; I used the relevant URL codes of each country on Google Colab, which allowed me to scrape through the API. While some of the “csv" files were uploaded to Github through which raw link was taken to generate charts via Vega Lite, some of the charts were generated in Google Colab itself after looping. Relevant link of Colab files are allocated in the explanation of the charts. However, one of the problems with IEA website was that the data was only provided on number of female managers in energy sector, which limits to focus specifically on renewable energy sector. Furthermore, some data on IEA was available on monthly basis; as I aimed to analyse on annual basis, to avoid confusion on the chart generation, I scraped the data only for January. International Renewable Energy Agency (IRENA) was also taken as a source for data extraction, which is an intergovernmental organization that also publishes statistics on renewable energy capacities of countries. However, the only available data was for 2023 year, and obtaining data was possible via either excel downloading or manually extracting data into separate excel sheet. API link only provided data on trend for global renewable energy employment.</p>        </section>
-        </section>
-      
+    
         <div class="chart-description" id="chart1">
             <figure id="Location1"></figure>
             <section id="data">
                 <div class="content-square">
                    
                     <p>
-                        The data for electricity production of two sectors were scraped from the IEA dataset website. Afterward, the obtained "csv" file was uploaded for Github, through which raw link was acquired to use in Vega-lite for chart generation. 
+                        The data for electricity production of two sectors were scraped from the IEA dataset website through API links. Afterward, the obtained "csv" file was uploaded to Github, where raw link was acquired to use in Vega-lite for chart generation.
                        
-                        
                     </p>
+                    <p>
+                    The patterns for renewable energy sector outweigh the trend for non-renewables for more than 10 years in both Norway and Sweden with slight changes in electricity production. Although generated electricity from non-renewables was higher in 2010 in both Denmark and Finland, electricity production from renewables is more than that of non-renewables in 2024 for both countries.
+                </p>
                     <nav>
                         <a href="https://colab.research.google.com/drive/1-nv25q70cf8VL68QHnykMr2nGRjbaTEn#scrollTo=gqX_GpPxoQlC" target="_blank">
                             Colab
@@ -134,7 +133,10 @@
                 <div class="content-square">
                    
                     <p>
-                        Electricity production from renewable energy sector was scraped from IEA dataset through acquired API links, which were used for looping Colab, where the final chart was also generated.  
+                        Data for electricity production from renewable energy sector was scraped from IEA dataset through acquired API links in Colab, where the final chart was also generated. 
+                    </p>
+                    <p>
+                        As can be seen not only the amount of electricity production increased for more than 10 years, but also the progress becomes visible as the number of renewable energy sources rose for each country over the years. The main development is noticed in the generation of energy from the wind power for all countries.
                     </p>
                     <nav>
                         <a href="https://colab.research.google.com/drive/1CFKD1Ns8J-F8WygvWYQhDBkAFde3T7Yi#scrollTo=izQ4eQiWeETI  " target="_blank">
@@ -151,8 +153,10 @@
                    
                     <p>
                         
-Data is obtained from World Development Indicators from Databank (WorldBank); I scraped the data with API links through the code for relevant series, which I used to generate chart in Vega-lite. 
-  
+                        Data (WorldBank) was scraped with API links through the code for relevant series; chart was generated in Vega-lite.   
+                    </p>
+                    <p>
+                        While the renewable energy consumption increased from 2000 onwards for Denmark, Finland, and Sweden, there has not been significant change for Norway.
                     </p>
                     <nav>
                         <a href="https://colab.research.google.com/drive/17kDl2Cq8MUkOkFG1QkoWr51aRi5Z1Xdj#scrollTo=rAhMVPz2ulDB  " target="_blank">
@@ -168,8 +172,10 @@ Data is obtained from World Development Indicators from Databank (WorldBank); I 
                 <div class="content-square">
                    
                     <p>
-                        Data was taken from WorldBank as well, which was scraped in Colab with API links to generate chart in Vega-lite. 
-  
+                        Data (WorldBank) was scraped in Colab with API links to generate chart in Vega-lite.   
+                    </p>
+                    <p>
+                        Similar to previous chart, although the amount of CO2 emissions decreased overtime for Denmark, Finland, and Sweden, it has been stable over time in Norway, where the emissions have been around 42 Mt since 2000.
                     </p>
                     <nav>
                         <a href="https://colab.research.google.com/drive/1Oh2UUxv3LCcJmzmp7eMtgdQU4k_k-awC#scrollTo=t2drC-zxo7cx   " target="_blank">
@@ -185,8 +191,10 @@ Data is obtained from World Development Indicators from Databank (WorldBank); I 
                 <div class="content-square">
                    
                     <p>
-                        While the data for GDP taken from WorldBank was scraped on Colab (Colab1), data on R&D spending was obtained from IAE and scraped on Colab (Colab2) as well. The acquired “csv” files were merged on Colab3, where the scatter plot was also generated. 
-  
+                        Data for GDP (WorldBank) and data on R&D (IAE) were scraped on Colab 1 and Colab 2, respectively. The acquired “csv” files were merged on Colab 3, where the scatter plot was also generated.   
+                    </p>
+                    <p>
+                        As can be seen, the increase in GDP in USD is associated positively with increase in R&D spending on renewable energy sector for 4 Nordic countries.
                     </p>
                     <nav>
                         <a href=" https://colab.research.google.com/drive/1-y3-R3t16SWKhR_GnNHRKJ5Zj36GIzAM#scrollTo=tkEGSXunl1r1" target="_blank">
@@ -212,7 +220,10 @@ Data is obtained from World Development Indicators from Databank (WorldBank); I 
                 <div class="content-square">
                 
                     <p>
-                        I generated this chart via Vega-lite with the raw link acquired from the manually written “csv” file. 
+                        The chart was generated in Vega-lite with the raw link acquired from the manually written “csv” file. Additional source was International Renewable Energy Agency (IRENA), which is an intergovernmental organization that also publishes statistics on renewable energy capacities of countries. 
+                    </p>
+                    <p>
+                        As can be seen, there is positive association between the number of female managers in energy sector and renewable energy employment. The highest pattern for renewable energy employment and number of female managers in 2023 is shown for Sweden.
                     </p>
                 
         </div>
@@ -223,8 +234,11 @@ Data is obtained from World Development Indicators from Databank (WorldBank); I 
                 <div class="content-square">
                    
                     <p>
-                        While the data for consumption taken from WorldBank was scraped on Colab (Colab1), data on electric vehicles (cars) sales was obtained from IAE and scraped on Colab (Colab2) as well. The acquired “csv” files were merged on Colab3, and the scatter plot was also acquired in this Colab.   
-                    </p>
+                        Data for consumption (WorldBank) and for electric vehicles (cars) sales (IAE) were scraped on Colab 1 and Colab 2, respectively.  The acquired “csv” files were merged on Colab 3, where the scatter plot was also acquired. 
+                  </p>
+                  <p>
+                    There has been positive association between renewable consumption and EV sales for 4 countries. This association is much steeper for Finland and Denmark, compared to Sweden and Norway. 
+                  </p>
                     <nav>
                         <a href=" https://colab.research.google.com/drive/1bmlOwIG6VPjBZctyzCYxxAztX8PPS7be#scrollTo=t1UWVl6Pc0WK  " target="_blank">
                             Colab 1
@@ -244,18 +258,13 @@ Data is obtained from World Development Indicators from Databank (WorldBank); I 
         </div>
         </section>
         <section id="data">
-            <h1>Conclusion (TO BE UPDATED)</h1>
-            <p> The patterns for renewable energy sector outweigh the trend for non-renewables for more than 10 years in both Norway and Sweden with slight changes in electricity production. Although generated electricity from non-renewables was higher in 2010 in both Denmark and Finland, electricity production from renewables is more than that of non-renewables in 2024 for both countries. 
-                2. As can be seen not only the amount of electricity production increases for more than 10 years, but also the progress becomes visible as the number of renewable energy sources rise for each country over the years. The main development is noticed in the generation of energy from the wind power for all countries. 
-                
-                3. While the renewable energy consumption increased from 2000 onwards for Denmark, Finland, and Sweden, there has not been significant change for Norway. 
-                
-                4. Similar to previous chart, although the amount of CO2 emissions decreased overtime for Denmark, Finland, and Sweden, it has been stable over time in Norway, where the emissions have been around 42 Mt sicne 2000. 
-                5. As can be seen the increase in GDP in USD is associated positively with increase in R&D spending on renewable energy sector for 4 Nordic countries. 
-                
-                6. As can be seen, there is positive association between the number of female managers in energy sector and renewable energy employment. The highest pattern for renewable energy employment in 2023 is shown for Sweden, which has less population that that of Norway. Norway (population analyse)
-                                         While the data for consumption taken from WorldBank was scraped on Colab (Colab1), data on electric vehicles (cars) sales was obtained from IAE and scraped on Colab (Colab2) as well. The acquired “csv” files were merged on Colab3, and the scatter plot was also acquired in this Colab. 
-                7. analyse the figure 7 
+            <h1> Challenges</h1>
+            <p> One of the problems was with IEA website; the data was only provided on number of female managers in energy sector, which limits to focus specifically on renewable energy sector. Furthermore, some data on IEA was available on monthly basis; as I aimed to analyse on annual basis, to avoid confusion on the chart generation, I scraped the data only for January. Also, the only available data in IRENA was for 2023 year, and obtaining data was possible via either excel downloading or manually extracting data into separate excel sheet. API link only provided data on trend for global renewable energy employment.</p>        </section>
+        </section>
+      
+        <section id="data">
+            <h1>Conclusion</h1>
+            <p> Maintenance of energy systems through the adoption of renewable energy policies has been the main focus of Nordic countries. The main development was noticed in the increased electricity production from wind source for 4 countries. Compared to other countries, Norway displayed less progress for the last 10 years as the patterns did not change substantially for renewable consumption and CO2 emissions. Surprisingly, it displayed the lowest rate for renewable energy employment in 2023 as well. However, the analysis once more proved that for more than 10 years, there has been progress in the implementation of renewable energy in those countries as most of electricity production comes from renewable energy nowadays. 
                 </p>        </section>
         </section>
     </div>
