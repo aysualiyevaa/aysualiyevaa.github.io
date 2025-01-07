@@ -6,7 +6,7 @@
   "width": 400,
   "height": 300,
   "title": {
-    "text": "Spain Unemployment Rates by Gender",
+    "text": "Spain Unemployment Rates by Gender, Age: 20-24",
     "subtitle": ["Spain Unemployment, 2014-2023", "Source: Statista"],
     "fontSize": 16,
     "anchor": "start",
@@ -23,27 +23,35 @@
       "calculate": "toNumber(datum.Unemployment_clean) / 100",
       "as": "Unemployment_rate"
     },
-    {"filter": "datum.Unemployment_rate != null && datum.Year != null"}
+    {"filter": "datum.Unemployment_rate != null && datum.Year != null"},
+    {
+      "calculate": "datum.Unemployment_rate * 100",
+      "as": "Unemployment_rate_percentage"
+    }
   ],
   "encoding": {
-    "x": {
-      "field": "Year",
-      "type": "temporal",
-      "title": "Year"
-    },
+    "x": {"field": "Year", "type": "temporal", "title": "Year"},
     "y": {
-      "field": "Unemployment_rate",
+      "field": "Unemployment_rate_percentage",
       "type": "quantitative",
       "title": "Unemployment Rate",
-      "axis": {"labelFormat": ".0%", "titleFontSize": 14}
+      "axis": {
+        "labelFormat": ".0%",  
+        "titleFontSize": 14
+      }
     },
     "color": {
       "field": "Gender",
       "type": "nominal",
       "legend": {"title": "Gender"}
     },
-    "tooltip": [
-      {"field": "Unemployment_rate", "type": "quantitative", "title": "Unemployment Rate"},
+   "tooltip": [
+      {
+        "field": "Unemployment_rate",  
+        "type": "quantitative",
+        "title": "Unemployment Rate",
+        "format": ".1%"  
+      },
       {"field": "Gender", "type": "nominal", "title": "Gender"}
     ]
   },
@@ -51,7 +59,7 @@
     {
       "encoding": {
         "color": {"field": "Gender", "type": "nominal"},
-        "y": {"field": "Unemployment_rate", "type": "quantitative"}
+        "y": {"field": "Unemployment_rate_percentage", "type": "quantitative"}
       },
       "layer": [
         {"mark": "line"},
@@ -89,9 +97,9 @@
         },
         {
           "encoding": {
-            "text": {"field": "Unemployment_rate", "type": "quantitative"},
+            "text": {"field": "Unemployment_rate_percentage", "type": "quantitative"},
             "x": {"type": "temporal", "field": "Year"},
-            "y": {"type": "quantitative", "field": "Unemployment_rate"}
+            "y": {"type": "quantitative", "field": "Unemployment_rate_percentage"}
           },
           "layer": [
             {
